@@ -1,0 +1,16 @@
+BotWLinkMesh = 0x60135e0;
+BotWLinkMeshIdleAnim = 0x60146f4;
+BotWLinkMeshLinksdialogAnim = 0x6017f9c;
+BotWLinkMeshLookatitselfAnim = 0x601b364;
+BotWLinkMeshLookstozeldaAnim = 0x601e550;
+BotWLinkMeshModerate_walk_lookingaroundAnim = 0x60201e4;
+BotWLinkMeshModerate_walkAnim = 0x6020c30;
+BotWLinkMeshTakeszeldahandAnim = 0x6022438;
+BotWLinkMeshTurnleftAnim = 0x60234d0;
+BotWLinkMeshTurnleftzeldadescendingAnim = 0x6026044;
+BotWLinkMeshTurnrightAnim = 0x6027080;
+BotWLinkMeshTurnrightfromspeechAnim = 0x6027d34;
+BotWLinkMeshWalkendAnim = 0x6028458;
+BotWLinkEye0Tex = 0x6028468;
+BotWLinkEye1Tex = 0x6029068;
+BotWLinkEye2Tex = 0x6029c68;

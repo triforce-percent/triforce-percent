@@ -1,0 +1,8 @@
+# Patching Sheik's actor to always treat Link as child
+# Base address
+808DDA00
+# Pretend always child:
+808DE1CC addiu t8, zero, 1
+808DE2F8 addiu t8, zero, 1
+808DE4AC addiu t8, zero, 1
+808E2D6C addiu t6, zero, 1

@@ -1,0 +1,35 @@
+Bootstrapper 1:
+Controller 3 is set to
+j 0xXXXXXXXX
+000010AA 00AAAAAA AAAAAAAA AAAAAAAA
+where A (right shifted 2) is the address of any "jr $ra; nop" command.
+This is 03E00008 / 00000000, theres one at 80000490.
+The instruction for this is 08000124
+At first controllers 2 and 4 will be empty (nop).
+Controller 1 is set to alternating frames of
+addi $gp, $r0, 0xIIII
+00100000 00011100 IIIIIIII IIIIIIII
+which is Z, R, C-up, C-down, and stick position
+and
+sh $gp, 0xKKKK($s1)
+10100110 00111100 KKKKKKKK KKKKKKKK
+which is A, Z, D-down, D-left, L, R, C-up, C-down, and stick position
+s1 points to global context 0x801C84A0, so we just have to find about 80 unused bytes somewhere
+around there
+
+OLD:
+Looks like between 0x801C7E70 and 0x801C8460 is unused
+Going to use 0x801C800C for the address counter,
+0x801C8004 for the simulated seed rotation,
+and 0x801C8010 for BS2 injection
+
+NEW:
+Using 0x80700000 for address counter
+No simulated seed rotation
+BS2 injection:
+globalCtx 0x801C84A0 (s1)
+.msgCtx 0x20D8
+.font 0x128
+.unk_8[0x100]
+= 0x2300(s1) or 0x801CA7A0
+This is a message font data buffer, filled when text is drawn to the screen. Will be overwritten at next text box. As long as there's no message on screen during BS1-BS2, should be OK.

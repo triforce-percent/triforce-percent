@@ -1,0 +1,9 @@
+# Blender MTL File: 'triforcelight.blend'
+# Material Count: 1
+exportid 1607928542.068032
+newmtl "lightmatl"
+vertexshading dynamic
+gbi gsDPPipeSync()
+gbi gsSPSetOtherModeLo(G_MDSFT_RENDERMODE, G_MDSIZ_RENDERMODE, AA_EN | Z_CMP | IM_RD | CVG_DST_CLAMP | ZMODE_XLU | CVG_X_ALPHA | ALPHA_CVG_SEL | FORCE_BL | GBL_c1(G_BL_CLR_IN, G_BL_A_IN, G_BL_CLR_MEM, G_BL_1MA) | GBL_c2(G_BL_CLR_IN, G_BL_A_IN, G_BL_CLR_MEM, G_BL_1MA))
+gbi gsDPSetCombineLERP(0, 0, 0, 1, 0, 0, 0, 1, COMBINED, 0, SHADE, 0, COMBINED, 0, SHADE, 0)
+gbi gsSPGeometryMode(G_CULL_FRONT | G_CULL_BACK | G_TEXTURE_GEN | G_TEXTURE_GEN_LINEAR | G_FOG | G_LIGHTING, G_SHADE | G_SHADING_SMOOTH | G_ZBUFFER)

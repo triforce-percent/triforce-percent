@@ -1,0 +1,3 @@
+Allocation        0x00000000
+Reserve           0x00000000
+VRAM              0x80800000

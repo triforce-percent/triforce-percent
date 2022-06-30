@@ -1,0 +1,24 @@
+# Blender v2.79 (sub 7) Objex File: 'triforcelight.blend'
+# www.blender.org
+# io_export_objex2 v2.0.0
+version 2.0
+exportid 1607928542.068032
+softinfo animation_framerate 20
+mtllib triforcelight.mtlex
+skellib triforcelight.skel
+animlib triforcelight.anim
+g "Light"
+useskel "LightSkel"
+v 0.000000 15.531172 0.000000 weight "Center" 1.000
+v 30.000000 15.531172 33.313004 weight "Right" 1.000
+v -30.000000 15.531172 33.313004 weight "Left" 1.000
+v -30.000000 15.531172 -35.548653 weight "Left" 1.000
+v 30.000000 15.531172 -35.548653 weight "Right" 1.000
+vc 1.000 0.918 0.424 0.000
+vc 1.000 0.918 0.424 0.467
+usemtl "lightmatl"
+s off
+f 3///1 2///1 1///2
+f 1///2 4///1 3///1
+f 4///1 1///2 5///1
+f 1///2 2///1 5///1

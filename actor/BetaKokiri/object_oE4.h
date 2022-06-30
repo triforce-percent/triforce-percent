@@ -1,0 +1,1 @@
+extern SkeletonHeader object_oE4_betaKokiriSkeleton;

@@ -1,0 +1,9 @@
+# Don't use relative paths, these tools get used elsewhere in the hierarchy
+# so the relative paths will become wrong.
+
+ZZRTL = "/home/your_name/n64/Tools/zzrtl-0.01-r4/zzrtl"
+PYTHON3 = python
+
+# This is the prefix for gcc, ld, etc. for N64. For example, if you have
+# mips64-ultra-elf-gcc in /opt/n64/bin, set this to mips64-ultra-elf-
+MIPS64PREFIX = mips64-ultra-elf-

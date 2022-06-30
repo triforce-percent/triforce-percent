@@ -1,0 +1,14 @@
+extern u64 ShehnaiDL_brass_refl_2_rgba16[];
+extern u64 ShehnaiDL_shehnai_body_rgba16[];
+extern u64 ShehnaiDL_shehnai_reed_rgba16[];
+extern Vtx ShehnaiDL_Shehnai_mesh_layer_Opaque_vtx_cull[8];
+extern Vtx ShehnaiDL_Shehnai_mesh_layer_Opaque_vtx_0[24];
+extern Gfx ShehnaiDL_Shehnai_mesh_layer_Opaque_tri_0[];
+extern Vtx ShehnaiDL_Shehnai_mesh_layer_Opaque_vtx_1[21];
+extern Gfx ShehnaiDL_Shehnai_mesh_layer_Opaque_tri_1[];
+extern Vtx ShehnaiDL_Shehnai_mesh_layer_Opaque_vtx_2[4];
+extern Gfx ShehnaiDL_Shehnai_mesh_layer_Opaque_tri_2[];
+extern Gfx mat_ShehnaiDL_bell_refl_layerOpaque[];
+extern Gfx mat_ShehnaiDL_shehnai_body_layerOpaque[];
+extern Gfx mat_ShehnaiDL_shehnai_reed_layerOpaque[];
+extern Gfx ShehnaiDL[];

@@ -1,0 +1,19 @@
+0
+77F .byte 4
+78C .byte 9 47 1
+798 .word 0x0B0D0000 0x03000060 0x01270000 0x0300007C
+//Disable LoD, which was set up with no far meshes!
+10A8 .byte 0xDE
+10B0 .word 0xDF000000 0
+12C8 .byte 0xDE
+12D0 .word 0xDF000000 0
+1518 .byte 0xDE
+1520 .word 0xDF000000 0
+17B8 .byte 0xDE
+17C0 .word 0xDF000000 0
+1C10 .byte 0xDE
+1C18 .word 0xDF000000 0
+72A8 .byte 0xDE
+72B0 .word 0xDF000000 0
+7D70 .byte 0xDE
+7D78 .word 0xDF000000 0

@@ -1,0 +1,160 @@
+//Patched actors
+PATCH 0xBCDB70 ../actor/z_player/ovl_player_actor.pat
+PATCH 0xBB11E0 ../actor/z_kaleido_scope/ovl_kaleido_scope.pat
+PATCH 0xEA7360 ../actor/z_oceff_wipe/actor.pat
+PATCH 0xC7B1F0 ../actor/z_en_xc/actor.pat
+PATCH 0xCC8430 ../actor/z_demo_effect/actor.pat
+PATCH 0xCB66A0 ../actor/z_bg_toki_swd/actor.pat
+PATCH 0xE9F0D0 ../actor/z_en_ge2/actor.pat
+PATCH 0xC004E0 ../actor/z_en_girla/actor.pat
+
+//Misc scene patches
+PATCH 0x217C000 ../scene/spot10/spot10_room_7.pat
+PATCH 0x2171000 ../scene/spot10/spot10_room_5.pat
+PATCH 0x28E4000 ../scene/shop1/shop1_room_0.pat
+PATCH 0x32B1000 ../scene/gerudoway/gerudoway_room_3.pat
+PATCH 0x2186000 ../scene/spot11/scene.pat
+PATCH 0x21A0000 ../scene/spot11/room_0.pat
+PATCH 0x1FE3000 ../scene/spot00/room_0.pat
+PATCH 0x20F2000 ../scene/spot07_scene/zoras_scene.pat
+PATCH 0x2103000 ../scene/spot07_scene/zoras_room1.pat
+PATCH 0x253C000 ../scene/tokinoma/tokinoma_room_0.pat
+
+//Object patches
+PATCH 0x18C1000 ../model/object_gi_butterfly/object_gi_butterfly.pat
+OBJECT 120 ../model/SagesCharm/object_gi_sagescharm.bin
+
+//Custom icons
+//icon_item_static starts at 0x7BD000, each image is 0x1000 (32x32x32b)
+//icon_item_24_static starts at 0x846000, each image is 0x900 (24x24x32b)
+//item_name_static starts at 0x880000, each image is 0x800 (128x16x8b)
+
+//Butterfly. Included in statics for interface patch, also need ROM
+//patch for text, also need staticdata for pause screen.
+//Image 0x1E
+PATCH 0x7DB000 ../textures/butterfly_bottle.rgba32.pat
+STATICDATA ../textures/butterfly_bottle.rgba32.bin 4 0x1E 0
+
+//Sages' Charm. Need ROM patch for text, also staticdata for pause screen.
+//Image 0x09 in icon_item_24_static
+PATCH 0x84B100 ../textures/sages_charm_24.rgba32.pat
+STATICDATA ../textures/sages_charm_24.rgba32.bin 4 0x6F 0
+
+//Triforce. Only need ROM patch for text.
+//Image 0x0D
+PATCH 0x84D500 ../textures/triforce.rgba32.pat
+
+//Item names. Only staticdata for pause screen.
+STATICDATA ../textures/item_butterfly.ia4.bin 5 0x1E 0
+STATICDATA ../textures/item_magic_powder.ia4.bin 5 0x31 0
+STATICDATA ../textures/item_sages_charm.ia4.bin 5 0x6F 0
+
+//Misc custom actors
+ACTOR 49 ../actor/BetaKokiri/betakokiri.zovl
+ACTOR 277 ../actor/z_en_skj/z_en_skj.zovl
+ACTOR 333 ../actor/z_en_owl/z_en_owl.zovl
+ACTOR 312 ../actor/z_en_ge1/z_en_ge1.zovl
+ACTOR 34 ../actor/Nabooru/nabooru.zovl
+ACTOR 54 ../actor/z_en_mm3/z_en_mm3.zovl
+ACTOR 288 ../actor/z_bg_spot07_taki/z_bg_spot07_taki.zovl
+
+//Larger custom actors
+OBJECT 59 ../actor/BossRunningMan/zobj.zobj
+ACTOR 115 ../actor/BossRunningMan/BossRunningMan.zovl
+
+//Custom music
+STATICDATA ../music/OvertureOfSages.aseq 1 0x6E020201 0x09000000
+STATICDATA ../music/OvertureOfSagesWarp.aseq 1 0x33020201 0x09000000
+STATICDATA ../music/ChamberOfSages.aseq 1 0x70020201 0x26000000
+STATICDATA ../music/ChamberOfSagesBank.abnk 2 0x26020201 0x0B000000
+STATICDATA ../music/triforce.aseq 1 0x71020201 0x03000000
+STATICDATA ../music/PowerOfTheGoddesses.aseq 1 0x72020201 0x03000000
+STATICDATA ../music/HereTogether1.aseq 1 0x73020201 0x27000000
+STATICDATA ../music/HereTogether2.aseq 1 0x74020201 0x27000000
+STATICDATA ../music/HereTogether3.aseq 1 0x75020201 0x27000000
+STATICDATA ../music/HereTogetherBank.abnk 2 0x27020201 0x10400000
+STATICDATA ../music/StaffRoll.aseq 1 0x76020201 0x03000000
+STATICDATA ../music/Trailer.aseq 1 0x77020201 0x03000000
+
+//UnicornFountain scene
+ACTOR 23 ../actor/z_bg_mjin/actor.zovl
+ACTOR 6 ../actor/BetaGreatFairy/betagreatfairy.zovl
+SCENE 78 ../scene/UnicornFountain/UnicornFountain_scene.zscene
+
+//Warp to the Sacred Realm
+ACTOR 83 ../actor/WSRCutscene/wsrcutscene.zovl
+
+//ChamberOfSages scene
+OBJECT 17 ../actor/CoSStaircases/zobj.zobj
+ACTOR 26 ../actor/CoSStaircases/cosstaircases.zovl
+ACTOR 31 ../actor/CoSSages/cossages.zovl
+SCENE 68 ../scene/ChamberOfSages/ChamberOfSages_scene.zscene
+
+//Custom Link animations
+STATICDATA ../anim/anim.bin 0 0x0 0x0
+
+//TriforceRoom scene
+OBJECT 4 ../actor/TriforcePiece/zobj.zobj
+ACTOR 1 ../actor/TriforcePiece/triforcepiece.zovl
+OBJECT 5 ../actor/TriforceChest/zobj.zobj
+ACTOR 3 ../actor/TriforceChest/triforcechest.zovl
+OBJECT 16 ../actor/TriforceLight/zobj.zobj
+ACTOR 5 ../actor/TriforceLight/triforcelight.zovl
+SCENE 46 ../scene/TriforceRoom/TriforceRoom_scene.zscene
+
+//Ending scene
+//Don't forget TriforceChest and TriforcePiece if move
+OBJECT 122 ../actor/BotWLink/zobj.zobj
+ACTOR 118 ../actor/BotWLink/BotWLink.zovl
+OBJECT 125 ../actor/BotWZelda/zobj.zobj
+ACTOR 121 ../actor/BotWZelda/BotWZelda.zovl
+OBJECT 126 ../actor/HolyLight/zobj.zobj
+ACTOR 122 ../actor/HolyLight/z_demo_holy.zovl
+OBJECT 123 ../actor/SilentPrincess/zobj.zobj
+ACTOR 120 ../actor/SilentPrincess/SilentPrincess.zovl
+ACTOR 116 ../actor/TwitchMessages/TwitchMessages.zovl
+SCENE 58 ../scene/Ending/Ending_scene.zscene
+STATICDATA ../voice/vo_link_zerudahime.vadpcm.bin 3 0 0
+STATICDATA ../voice/vo_link_isshoni.vadpcm.bin 3 1 0
+STATICDATA ../voice/vo_zelda_link.vadpcm.bin 3 2 0
+STATICDATA ../voice/vo_zelda_itseems.vadpcm.bin 3 3 0
+STATICDATA ../voice/vo_zelda_imsohappy.vadpcm.bin 3 4 0
+STATICDATA ../voice/vo_zelda_iknowtheyre.vadpcm.bin 3 5 0
+STATICDATA ../voice/vo_zelda_look.vadpcm.bin 3 6 0
+STATICDATA ../voice/vo_zelda_youasked.vadpcm.bin 3 7 0
+STATICDATA ../voice/vo_zelda_hereitis.vadpcm.bin 3 8 0
+STATICDATA ../voice/vo_zelda_thankyou.vadpcm.bin 3 9 0
+STATICDATA ../voice/chimes.vadpcm.bin 3 10 0
+STATICDATA ../voice/botw_step_stone_l0.vadpcm.bin 3 11 0
+STATICDATA ../voice/botw_step_stone_l1.vadpcm.bin 3 12 0
+STATICDATA ../voice/botw_step_stone_r0.vadpcm.bin 3 13 0
+STATICDATA ../voice/botw_step_stone_r1.vadpcm.bin 3 14 0
+STATICDATA ../voice/botw_step_grassstraw_l0.vadpcm.bin 3 15 0
+STATICDATA ../voice/botw_step_grassstraw_l1.vadpcm.bin 3 16 0
+STATICDATA ../voice/botw_step_grassstraw_r0.vadpcm.bin 3 17 0
+STATICDATA ../voice/botw_step_grassstraw_r1.vadpcm.bin 3 18 0
+STATICDATA ../voice/botw_rustle_0.vadpcm.bin 3 19 0
+STATICDATA ../voice/botw_rustle_1.vadpcm.bin 3 20 0
+STATICDATA ../voice/botw_rustle_2.vadpcm.bin 3 21 0
+
+//Staff Roll
+PATCH 0x1FB8000 ../scene/spot00/scene.pat
+PATCH 0x221D000 ../scene/spot16/scene.pat
+PATCH 0x212B000 ../scene/spot09/scene.pat
+PATCH 0x213D000 ../scene/spot09/room_0.pat
+PATCH 0x2499000 ../scene/ydan/scene.pat
+PATCH 0x2110000 ../scene/spot08/scene.pat
+PATCH 0x2122000 ../scene/spot08/room_0.pat
+PATCH 0x206F000 ../scene/spot04/scene.pat
+PATCH 0x2081000 ../scene/spot04/room_0.pat
+PATCH 0x29BC000 ../scene/spot20/scene.pat
+PATCH 0x29CE000 ../scene/spot20/room_0.pat
+PATCH 0x21DC000 ../scene/spot13/scene.pat
+PATCH 0x21E3000 ../scene/spot13/room_1.pat
+PATCH 0x21F6000 ../scene/spot15/scene.pat
+PATCH 0x220F000 ../scene/spot15/room_0.pat
+
+//Unused
+//SCENE 41 ../scene/TestVAlpha/TestVAlpha_scene.zscene
+//OBJECT 121 ../actor/TestCelShading/zobj.zobj
+//ACTOR 117 ../actor/TestCelShading/TestCelShading.zovl

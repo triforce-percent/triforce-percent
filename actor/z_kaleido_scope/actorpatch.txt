@@ -1,0 +1,15 @@
+# base addr
+808137C0
+
+# Patch DmaMgr_SendRequest1 for item name loading
+80822E74 jal Patched_LoadItemName
+
+# Patch Magic Powder / Odd Potion to be enabled for both ages
+80829DCD .byte 9
+
+# Patch to not draw equip slot outlines if not an item subscreen item
+8081A5D8 addiu t5, s3, 0x0000
+8081A600 lbu t6, 0x0069(t5)
+8081A604 sltiu v0, t6, 0x003B
+8081A610 beq v0, zero, 8081A664
+8081A67C addu t5, s3, t1

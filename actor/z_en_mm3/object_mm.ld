@@ -1,0 +1,9 @@
+gRunningManMouthClosedTex = 0x06000c30;
+gRunningManMouthOpenTex = 0x06000e30;
+gRunningManSkel = 0x06005e18;
+gRunningManSitWaitAnim = 0x06006c50;
+gRunningManHappyAnim = 0x06008060;
+gRunningManExcitedAnim = 0x060073a0;
+gRunningManSitStandAnim = 0x06006940;
+gRunningManRunAnim = 0x06000718;
+gRunningManSprintAnim = 0x06000468;

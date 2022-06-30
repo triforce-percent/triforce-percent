@@ -1,0 +1,2 @@
+0x362 has the scale as s16 (originally 1000)
+We have to copy this as a new actor because otherwise changing the scale would change all the warp pads, not just the Pedestal of the Ocarina

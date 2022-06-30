@@ -1,0 +1,1191 @@
+/*******************************************************
+ * <z64.me> zzrtl script for injecting assets into OoT *
+ *******************************************************/
+
+/* how to use */
+/* uncomment the enum associated with the OoT version you *
+ * are targeting, and comment out or delete the others    */
+
+/* OoT debug
+enum {
+	TBL_OBJECT               = 0x00B9E6C8  // object table
+	, TBL_OBJECT_ENTRIES     = 402         // object count
+	, TBL_ACTOR              = 0x00B8D440  // actor overlay table
+	, TBL_ACTOR_ENTRIES      = 471         // actor overlay count
+	, TBL_PARTICLE           = 0x00B8CB50  // particle overlay table
+	, TBL_PARTICLE_ENTRIES   = 37          // particle overlay count
+	, TBL_SCENE              = 0x00BA0BB0  // scene table
+	, TBL_SCENE_ENTRIES      = 110         // scene count
+	, TBL_ROUTE              = 0x00B9F360  // route table
+	, TBL_ROUTE_ENTRIES      = 1556        // route count
+	, TBL_DMA                = 0x00012F70  // dma table
+	, TBL_DMA_ENTRIES        = 1548        // dma entries
+	, TBL_OVL_GAMESTATE      = 0x00B969D0  // ovl_title
+	, TBL_OVL_PLAYER         = 0x00BA4340  // ovl_kaleido_scope
+	, TBL_OVL_MAPMARK        = 0x00B97298  // ovl_map_mark_data
+	
+	, TITLECARD_W            = 144         // title card dimensions
+	, TITLECARD_H            = 24          // use 72 to include de, fr
+	, VRAM_CODE              = 0x8001CE60  // vram start of code
+	, VROM_CODE              = 0x00A94000  // vrom start of code
+	, VROM_PLAYER            = 0x00C010B0  // vrom start of player_actor
+	
+	, DMA_ITEM_FIELD         = 9           // icon_item_field_static
+	, DMA_ITEM_LOCALIZED     = 14          // last icon_item_x_static
+	, DMA_CODE               = 28
+	, DMA_OVL_TITLE
+	, DMA_OVL_SELECT
+	, DMA_OVL_OPENING
+	, DMA_OVL_FILE_CHOOSE
+	, DMA_OVL_KALEIDO_SCOPE
+	, DMA_OVL_PLAYER_ACTOR
+	, DMA_OVL_MAP_MARK_DATA
+	
+	, DMA_ACTOR_FIRST        = 36          // En_Test
+	, DMA_ACTOR_LAST         = 497         // Shot_Sun
+	, DMA_OBJECT_FIRST       = 498         // gameplay_keep
+	, DMA_OBJECT_LAST        = 879         // object_zl4
+	, DMA_G_PN_FIRST         = 880         // g_pn_01
+	, DMA_G_PN_LAST          = 936         // g_pn_57
+	, DMA_SKYBOX_FIRST       = 941         // vr_fine0_static
+	, DMA_SKYBOX_LAST        = 960         // vr_holy1_pal_static
+	, DMA_PRERENDER_FIRST    = 961         // vr_MDVR_static
+	, DMA_PRERENDER_LAST     = 1004        // vr_FCVR_pal_static
+	, DMA_SCENE_FIRST        = 1007        // syotes_scene
+	, DMA_SCENE_LAST         = 1517        // test01_room_0
+	, DMA_UNUSED_FIRST       = 1518        // bump_texture_static
+	, DMA_UNUSED_LAST        = 1530        // anime_texture_6_static
+	, DMA_SOFTSPRITE         = 1531        // softsprite_matrix_static
+	, DMA_BLANK_FIRST        = 1532        // first blank dma entry
+	, DMA_BLANK_LAST         = 1547        // last blank dma entry
+	
+	, ACTID_LINK             = 0           // link's actor id
+	
+	// hard-coded function pointers for ovl_player_actor
+	, OFS_OVL_PLAYER_ACTOR_INIT_HI  = 0x00B288F8  // init
+	, OFS_OVL_PLAYER_ACTOR_INIT_LO  = 0x00B28900
+	, OFS_OVL_PLAYER_ACTOR_DEST_HI  = 0x00B28908  // dest
+	, OFS_OVL_PLAYER_ACTOR_DEST_LO  = 0x00B28914
+	, OFS_OVL_PLAYER_ACTOR_MAIN_HI  = 0x00B2891C  // main (update)
+	, OFS_OVL_PLAYER_ACTOR_MAIN_LO  = 0x00B28928
+	, OFS_OVL_PLAYER_ACTOR_DRAW_HI  = 0x00B28930  // draw
+	, OFS_OVL_PLAYER_ACTOR_DRAW_LO  = 0x00B2893C
+	
+	// hard-coded function pointers for ovl_kaleido_scope
+	, OFS_OVL_KALEIDO_SCOPE_INIT_HI = 0x00B33208  // init
+	, OFS_OVL_KALEIDO_SCOPE_INIT_LO = 0x00B3320C
+	, OFS_OVL_KALEIDO_SCOPE_DRAW_HI = 0x00B33218  // draw
+	, OFS_OVL_KALEIDO_SCOPE_DRAW_LO = 0x00B33220
+}; */
+
+/* OoT NTSC 1.0 */
+enum {
+	TBL_OBJECT               = 0x00B6EF58  // object table
+	, TBL_OBJECT_ENTRIES     = 402         // object count
+	, TBL_ACTOR              = 0x00B5E490  // actor overlay table
+	, TBL_ACTOR_ENTRIES      = 471         // actor overlay count
+	, TBL_PARTICLE           = 0x00B5DBA0  // particle overlay table
+	, TBL_PARTICLE_ENTRIES   = 37          // particle overlay count
+	, TBL_SCENE              = 0x00B71440  // scene table
+	, TBL_SCENE_ENTRIES      = 101         // scene count
+	, TBL_ROUTE              = 0x00B6FBF0  // route table
+	, TBL_ROUTE_ENTRIES      = 1556        // route count
+	, TBL_DMA                = 0x00007430  // dma table
+	, TBL_DMA_ENTRIES        = 1526        // dma entries
+	, TBL_OVL_GAMESTATE      = 0x00B672A0  // game state overlay table
+	, TBL_OVL_PLAYER         = 0x00B743E0  // pause/player ovl table
+	, TBL_OVL_MAPMARK        = 0x00B67B58  // map_mark_data ovl table
+	
+	, TITLECARD_W            = 144         // title card dimensions
+	, TITLECARD_H            = 48          // use 24 for jp only
+	, VRAM_CODE              = 0x800110A0  // vram start of code
+	, VROM_CODE              = 0x00A87000  // vrom start of code
+	, VROM_PLAYER            = 0x00BCDB70  // vrom start of player_actor
+	
+	, DMA_ITEM_FIELD         = 10          // icon_item_field_static
+	, DMA_ITEM_LOCALIZED     = 14          // last icon_item_x_static
+	, DMA_CODE               = 27
+	, DMA_OVL_TITLE          = 29
+	, DMA_OVL_SELECT
+	, DMA_OVL_OPENING
+	, DMA_OVL_FILE_CHOOSE
+	, DMA_OVL_KALEIDO_SCOPE
+	, DMA_OVL_PLAYER_ACTOR
+	, DMA_OVL_MAP_MARK_DATA
+	
+	, DMA_ACTOR_FIRST        = 36          // En_Test
+	, DMA_ACTOR_LAST         = 497         // Shot_Sun
+	, DMA_OBJECT_FIRST       = 498         // gameplay_keep
+	, DMA_OBJECT_LAST        = 879         // object_zl4
+	, DMA_G_PN_FIRST         = 880         // g_pn_01
+	, DMA_G_PN_LAST          = 936         // g_pn_57
+	, DMA_SKYBOX_FIRST       = 941         // vr_fine0_static
+	, DMA_SKYBOX_LAST        = 960         // vr_holy1_pal_static
+	, DMA_PRERENDER_FIRST    = 961         // vr_MDVR_static
+	, DMA_PRERENDER_LAST     = 1004        // vr_FCVR_pal_static
+	, DMA_SCENE_FIRST        = 1007        // ddan_scene
+	, DMA_SCENE_LAST         = 1495        // ganontikasonogo_room_1
+	, DMA_UNUSED_FIRST       = 1496        // bump_texture_static
+	, DMA_UNUSED_LAST        = 1508        // anime_texture_6_static
+	, DMA_SOFTSPRITE         = 1509        // softsprite_matrix_static
+	, DMA_BLANK_FIRST        = 1510        // first blank dma entry
+	, DMA_BLANK_LAST         = 1525        // last blank dma entry
+	
+	, ACTID_LINK             = 0           // link's actor id
+	
+	// hard-coded function pointers for ovl_player_actor
+	, OFS_OVL_PLAYER_ACTOR_INIT_HI  = 0x00B0D5B8  // init
+	, OFS_OVL_PLAYER_ACTOR_INIT_LO  = 0x00B0D5C0
+	, OFS_OVL_PLAYER_ACTOR_DEST_HI  = 0x00B0D5C8  // dest
+	, OFS_OVL_PLAYER_ACTOR_DEST_LO  = 0x00B0D5D4
+	, OFS_OVL_PLAYER_ACTOR_MAIN_HI  = 0x00B0D5DC  // main (update)
+	, OFS_OVL_PLAYER_ACTOR_MAIN_LO  = 0x00B0D5E8
+	, OFS_OVL_PLAYER_ACTOR_DRAW_HI  = 0x00B0D5F0  // draw
+	, OFS_OVL_PLAYER_ACTOR_DRAW_LO  = 0x00B0D5FC
+	
+	// hard-coded function pointers for ovl_kaleido_scope
+	, OFS_OVL_KALEIDO_SCOPE_INIT_HI = 0x00B0FE48  // init
+	, OFS_OVL_KALEIDO_SCOPE_INIT_LO = 0x00B0FE50
+	, OFS_OVL_KALEIDO_SCOPE_DRAW_HI = 0x00B0FE58  // draw
+	, OFS_OVL_KALEIDO_SCOPE_DRAW_LO = 0x00B0FE64
+};
+
+/* valid (fmt, bpp) options for png functions */
+enum n64texconv_fmt
+{
+	N64TEXCONV_RGBA = 0
+	, N64TEXCONV_YUV
+	, N64TEXCONV_CI
+	, N64TEXCONV_IA
+	, N64TEXCONV_I
+};
+enum n64texconv_bpp
+{
+	N64TEXCONV_4 = 0
+	, N64TEXCONV_8
+	, N64TEXCONV_16
+	, N64TEXCONV_32
+};
+
+enum bool
+{
+	false = 0
+	, true = 1
+	, compress = 1
+};
+
+/* helper function that zeroes out skipped table entries */
+void
+skip_test(struct rom *rom, int index, int *last, int table, int stride)
+{
+	/* skipped one or more entries between invocations */
+	if (index > *last + 1)
+	{
+		/* advance to first skipped entry */
+		*last = *last + 1;
+		
+		/* zero out skipped entries */
+		memset(
+			rom.raw(table + *last * stride)
+			, 0
+			, (index - *last) * stride
+		);
+	}
+	
+	/* update last known index */
+	*last = index;
+}
+
+/* helper function that writes lui, addiu pair into rom; hi and lo
+   must be rom offsets of lui and addiu opcodes, respectively */
+void
+split_ptr(struct rom *rom, int ptr, int hi, int lo, int correct)
+{
+	int v;
+	int tell;
+
+	/* back up rom address */
+	tell = rom.tell();
+
+	/* update hi part of pointer */
+	rom.seek(hi + 2);
+	v = u16(ptr >> 16);
+	if (correct && (u16(ptr) & 0x8000))
+		v++;
+	rom.write16(v);
+
+	/* update low part of pointer */
+	rom.seek(lo + 2);
+	rom.write16(ptr);
+
+	/* restore rom address */
+	rom.seek(tell);
+}
+
+void
+system_overlay(struct rom *rom)
+{
+	struct conf *conf;
+	char *filename;
+	char *ovl;
+	FILE *fp;
+	int  *entry;
+	int  *Oarr;
+	int  *arr;
+	int   vram;
+	int   vram_sz;
+	int   ptr;
+	int   i;
+	
+	dir_enter("overlay");
+	
+	/* system overlays aligned 0x10 in retail */
+	rom.align(0x10);
+	
+	/* overlay filenames */
+	filename =
+		"ovl_title\0"          /* n64 logo animation       */
+		"ovl_select\0"         /* map select               */
+		"ovl_opening\0"        /* initialized title screen */
+		"ovl_file_choose\0"    /* file select screen       */
+		"ovl_kaleido_scope\0"  /* pause screen             */
+		"ovl_player_actor\0"   /* link's actor             */
+		"ovl_map_mark_data\0"  /* minimap icon data        */
+	;
+	
+	/* create a list of offsets to individual overlay table entries */
+	entry = int_array(
+		7                                // num elements
+		, TBL_OVL_GAMESTATE + 2 * 48     // ovl_title
+		, TBL_OVL_GAMESTATE + 1 * 48     // ovl_select
+		, TBL_OVL_GAMESTATE + 4 * 48     // ovl_opening
+		, TBL_OVL_GAMESTATE + 5 * 48     // ovl_file_choose
+		, TBL_OVL_PLAYER    + 0 * 28     // ovl_kaleido_scope
+		, TBL_OVL_PLAYER    + 1 * 28     // ovl_player_actor
+		, TBL_OVL_MAPMARK                // ovl_map_mark_data
+	);
+	
+	/* create array of offsets to hard-coded split function pointers */
+	Oarr = int_array(
+	   19                               // num elements
+	   
+	   // these all contain none
+		, 0                              // ovl_title
+		, 0                              // ovl_select
+		, 0                              // ovl_opening
+		, 0                              // ovl_file_choose
+		
+		, OFS_OVL_KALEIDO_SCOPE_INIT_HI  // ovl_kaleido_scope
+		, OFS_OVL_KALEIDO_SCOPE_INIT_LO
+		, OFS_OVL_KALEIDO_SCOPE_DRAW_HI
+		, OFS_OVL_KALEIDO_SCOPE_DRAW_LO
+		, 0
+		
+		, OFS_OVL_PLAYER_ACTOR_INIT_HI   // ovl_player_actor
+		, OFS_OVL_PLAYER_ACTOR_INIT_LO
+		, OFS_OVL_PLAYER_ACTOR_DEST_HI
+		, OFS_OVL_PLAYER_ACTOR_DEST_LO
+		, OFS_OVL_PLAYER_ACTOR_MAIN_HI
+		, OFS_OVL_PLAYER_ACTOR_MAIN_LO
+		, OFS_OVL_PLAYER_ACTOR_DRAW_HI
+		, OFS_OVL_PLAYER_ACTOR_DRAW_LO
+		, 0
+		
+		, 0                              // ovl_map_mark_data
+	);
+	
+	i = 0;
+	arr = Oarr;
+	while (i < 7)
+	{
+		/* enter overlay name directory */
+		dir_enter(substring(filename, i));
+		
+		/* go to table entry (skip first word) */
+		rom.seek(entry[i] + 4);
+		
+		/* inject file */
+		ovl = rom.inject("*.zovl", compress);
+		
+		/* get overlay vram size */
+		vram_sz = ovl_vram_sz(ovl, rom.file_sz());
+		
+		/* parse configuration file */
+		conf = conf.new("conf.txt", "list");
+		while (*arr)
+		{
+			/* function pointers in conf are in same order as array */
+			ptr = conf.get_int(0);
+			
+			/* write split function pointer into rom */
+			split_ptr(rom, ptr, arr[0], arr[1], true);
+			
+			/* advance to next item */
+			arr = arr + 2;
+			conf.next();
+		}
+		arr++; /* skip trailing 0 */
+		
+		rom.write32(rom.file_start());  /* vrom start  */
+		rom.write32(rom.file_end());    /* vrom end    */
+		if (conf.exists("vram"))        /* custom vram */
+		{
+			vram = conf.get_int("vram");
+			rom.write32(vram);           /* vram start  */
+		}
+		else
+			vram = rom.read32();         /* vram start  */
+		rom.write32(vram + vram_sz);    /* vram end    */
+		
+		/* game state overlays */
+		if (i < 4)
+		{
+			rom.seek_cur(4);
+			rom.write32(conf.get_int("init"));
+			rom.write32(conf.get_int("dest"));
+			rom.seek_cur(12);
+			rom.write32(conf.get_int("size"));
+		}
+		/* ovl_map_mark_data */
+		else if (i == 6)
+			rom.write32(conf.get_int("dungeon_mark_data"));
+		
+		/* advance to next */
+		dir_leave();
+		conf.free();
+		i++;
+	}
+	
+	/* cleanup */
+	free(Oarr);
+	dir_leave();
+}
+
+void
+systemdir(struct rom *rom)
+{
+	dir_enter("system");
+	system_overlay(rom);
+	dir_leave();
+}
+
+void
+route(struct rom *rom)
+{
+	struct conf *table;
+	char *music;
+	char *card;
+	int index_last;
+	int fadeout;
+	int fadein;
+	int index;
+	int scene;
+	int spawn;
+	int var;
+	
+	/* load the table */
+	table = table.new("route.txt", "table");
+	index_last = -1;
+	
+	/* parse every row */
+	while (table.remaining())
+	{
+		/* retrieve variables */
+		index   = table.get_int("index");
+		scene   = table.get_int("scene");
+		spawn   = table.get_int("spawn");
+		music   = table.get_str("music");
+		card    = table.get_str("title");
+		fadein  = table.get_int("fadein");
+		fadeout = table.get_int("fadeout");
+		
+		/* ensure we don't exceed table limit */
+		if (index >= TBL_ROUTE_ENTRIES)
+			die("route table limit exceeded");
+		
+		/* construct var */
+		var = fadeout & 0x007F;
+		var = var | (fadein & 0x007F) << 7;
+		
+		/* music flags */
+		if (!strcasecmp(music, "go"))
+			var = var | 0x8000;
+		else if (strcasecmp(music, "stop"))
+			die("unknown music flag '%s'", music);
+		
+		/* title card flags */
+		if (!strcasecmp(card, "on"))
+			var = var | 0x4000;
+		else if (strcasecmp(card, "off"))
+			die("unknown title card flag '%s'", card);
+		
+		/* zero out any skipped entries */
+		skip_test(rom, index, &index_last, TBL_ROUTE, 4);
+		
+		/* go to table entry */
+		rom.seek(TBL_ROUTE + index * 4);
+		
+		/* write table entry */
+		rom.write8(scene);
+		rom.write8(spawn);
+		rom.write16(var);
+		
+		/* go to next row */
+		table.next();
+	}
+	
+	/* cleanup */
+	table.free();
+}
+
+/* process a single header, updating room command's contents */
+/* returns non-zero if header or provided offset (ofs) is invalid */
+int
+scene_header_rooms(
+	struct rom *rom
+	, char *room_ptrs
+	, int room_ct
+	, int start
+	, int sz
+	, int ofs
+)
+{
+	int rseg;
+	char *b;
+	char *b_end;
+	
+	/* entries pointing to 0 are valid, but not processed */
+	if (!ofs)
+		return 0;
+	
+	/* want only lower 3 bytes of ofs from this point on */
+	rseg = ofs >> 24;
+	ofs = ofs & 0xFFFFFF;
+	
+	/* invalid offset conditions */
+	if (
+		rseg != 0x02     /* invalid ram segment  */
+		|| (ofs & 3)     /* unaligned pointer    */
+		|| ofs + 8 > sz  /* pointer exceeds file */
+	)
+		return 1;
+	
+	b = rom.raw(start + ofs);
+	b_end = rom.raw(start + sz);
+	
+	/* search scene header for room command (0x04) */
+	while (b < b_end && *b != 0x04)
+	{
+		/* end loop conditions */
+		if (
+			*b == 0x14          /* end command     */
+			|| u8(*b) >= 0x20   /* invalid command */
+		)
+			b = b_end;
+		
+		/* advance to next header command */
+		b = b + 8;
+	}
+			
+	/* failed to locate room command, or it is invalid */
+	if (
+		b >= b_end                   /* no room command found */
+		|| b[1] != room_ct           /* invalid room count    */
+		|| get16(b+2)                /* bytes 2, 3 aren't 0   */
+		|| b[4] != 0x02              /* invalid ram segment   */
+		|| (b[7] & 3)                /* unaligned pointer     */
+		|| get24(b+5) + b[1]*8 > sz  /* pointer exceeds file  */
+	)
+		return 1;
+	
+	/* overwrite room pointers */
+	memcpy(rom.raw(start + get24(b+5)), room_ptrs, room_ct * 8);
+	
+	/* debug output */
+	//printf(" > valid header %08X\n", ofs | (rseg << 24));
+	
+	/* valid header */
+	return 0;
+}
+
+void
+scene(struct rom *rom)
+{
+	struct folder *list;
+	struct folder *room;
+	struct conf *conf;
+	char *room_ptrs;
+	char *scene;
+	char *name;
+	char *b;
+	char *b_end;
+	int start;
+	int end;
+	int sz;
+	int index;
+	int scard;
+	int ecard;
+	int unk_a;
+	int unk_b;
+	int rinit;
+	int room_ct;
+	int index_last;
+	
+	/* allocate space for 256 room pointers */
+	room_ptrs = malloc(256 * 4 * 2);
+	
+	/* scenes aligned 0x1000 in retail */
+	rom.align(0x1000);
+	
+	/* enter and parse folder */
+	dir_enter("scene");
+	list = list.new(0);
+	if (!list.count())
+		die("scene folder is empty");
+	index_last = -1;
+	
+	/* repeats for every item in the list */
+	while (list.remaining())
+	{
+		/* initialize variables */
+		index = list.index();
+		name = list.name();
+		
+		/* display progress */
+		printf("\r""scene %d/%d: ", index, list.max());
+		
+		/* ensure we don't exceed table limit */
+		if (index >= TBL_SCENE_ENTRIES)
+			die("scene table limit exceeded");
+		
+		/* enter directory of list entry */
+		dir_enter(name);
+		
+		/* parse conf */
+		conf = conf.new("conf.txt", "list");
+		unk_a = conf.get_int("unk_a");
+		unk_b = conf.get_int("unk_b");
+		rinit = conf.get_int("shader");
+		conf.free();
+		
+		/* attempt to inject file */
+		scene = rom.inject("*.zscene", compress);
+		start = rom.file_start();
+		end = rom.file_end();
+		sz = end - start;
+		scard = 0;
+		ecard = 0;
+		
+		/* if scene exists, process title card and rooms */
+		if (scene)
+		{
+			/* title card */
+			rom.inject_png(
+				"title.png"
+				, N64TEXCONV_IA
+				, N64TEXCONV_8
+				, compress
+			);
+			scard = rom.file_start();
+			ecard = rom.file_end();
+			
+			/* inject rooms */
+			room = room.new("*.zmap");
+			if (!room.count())
+				die("no rooms found");
+			if (room.count() > 127)
+				die("too many (%d) rooms", room.count());
+			room_ct = 0;
+			while (room.remaining())
+			{
+				/* injection failure is unacceptable */
+				if (!rom.inject(room.name(), compress))
+					die("'%s' injection failure", room.name());
+				
+				/* add to room pointer list */
+				put32(room_ptrs + room_ct * 8    , rom.file_start());
+				put32(room_ptrs + room_ct * 8 + 4, rom.file_end()  );
+				
+				/* proceed to next room */
+				room_ct++;
+				room.next();
+			}
+			room.free();
+			
+			/* update room pointers in first header */
+			if (
+			scene_header_rooms(
+				rom
+				, room_ptrs
+				, room_ct
+				, start
+				, sz
+				, 0x02000000
+			)
+			)
+				die("invalid header");
+			
+			/* locate alternate header command (0x18) */
+			b = rom.raw(start);
+			b_end = b + sz;
+			while (b < b_end && *b != 0x18)
+			{
+				/* end loop conditions */
+				if (
+					*b == 0x14          /* end command     */
+					|| u8(*b) >= 0x20   /* invalid command */
+				)
+					b = b_end;
+				
+				/* advance to next header command */
+				b = b + 8;
+			}
+			
+			/* alternate header command found */
+			if (b < b_end)
+			{
+				/* invalid ram segment */
+				if (b[4] != 0x02)
+					die("0x18 cmd: invalid ram segment %02X", b[4]);
+				
+				/* invalid offset */
+				if (
+					(b[7] & 3)              /* unaligned pointer     */
+					|| get24(b+5) + 4 > sz  /* pointer exceeds file  */
+				)
+					die("0x18 cmd: invalid offset %08X", get32(b+4));
+				
+				/* grab alternate header list */
+				b = rom.raw(start + get24(b+5));
+				
+				/* process list */
+				while (b < b_end)
+				{
+					/* scene header failed in some way; end of list */
+					if (
+					scene_header_rooms(
+						rom
+						, room_ptrs
+						, room_ct
+						, start
+						, sz
+						, get32(b)
+					)
+					)
+						b = b_end;
+					
+					/* advance to next entry */
+					b = b + 4;
+				}
+			}
+		}
+		
+		/* zero out any skipped entries */
+		skip_test(rom, index, &index_last, TBL_SCENE, 20);
+		
+		/* go to table entry */
+		rom.seek(TBL_SCENE + index * 20);
+		
+		/* write its table entry */
+		rom.write32(start);  /* vrom start          */
+		rom.write32(end);    /* vrom end            */
+		rom.write32(scard);  /* title card start    */
+		rom.write32(ecard);  /* title card end      */
+		rom.write8(unk_a);   /* unknown             */
+		rom.write8(rinit);   /* render init func id */
+		rom.write8(unk_b);   /* unknown             */
+		
+		/* leave directory */
+		dir_leave();
+		
+		/* go to next entry in list */
+		list.next();
+	}
+	
+	/* cleanup */
+	free(room_ptrs);
+	list.free();
+	dir_leave();
+	printf("success!\n");
+}
+
+void
+object(struct rom *rom)
+{
+	struct folder *list;
+	char *name;
+	int index_last;
+	int index;
+	
+	/* objects aligned 0x1000 in retail */
+	rom.align(0x1000);
+	
+	/* enter and parse folder */
+	dir_enter("object");
+	list = list.new(0);
+	if (!list.count())
+		die("object folder is empty");
+	index_last = -1;
+	
+	/* repeats for every item in the list */
+	while (list.remaining())
+	{
+		/* initialize variables */
+		index = list.index();
+		name = list.name();
+		
+		/* display progress */
+		printf("\r""object %d/%d: ", index, list.max());
+		
+		/* ensure we don't exceed table limit */
+		if (index >= TBL_OBJECT_ENTRIES)
+			die("object table limit exceeded");
+		
+		/* enter directory of list entry */
+		dir_enter(name);
+		
+		/* attempt to inject file */
+		rom.inject("*.zobj", compress);
+		
+		/* zero out any skipped entries */
+		skip_test(rom, index, &index_last, TBL_OBJECT, 8);
+		
+		/* go to table entry */
+		rom.seek(TBL_OBJECT + index * 8);
+		
+		/* write its table entry */
+		/* if rom.inject() failed, file offsets return 0 */
+		rom.write32(rom.file_start());
+		rom.write32(rom.file_end());
+		
+		/* leave directory */
+		dir_leave();
+		
+		/* go to next entry in list */
+		list.next();
+	}
+	
+	/* cleanup */
+	list.free();
+	dir_leave();
+	printf("success!\n");
+}
+
+void
+actor(struct rom *rom)
+{
+	struct folder *list;
+	struct conf *conf;
+	char *name;
+	char *ovl;
+	char *ss;
+	int index_last;
+	int index;
+	int vram;
+	int vram_end;
+	int ivar;
+	int atype;
+	
+	/* actors aligned 0x10 in retail */
+	rom.align(0x10);
+	
+	/* enter and parse folder */
+	dir_enter("actor");
+	list = list.new(0);
+	if (!list.count())
+		die("actor folder is empty");
+	index_last = -1;
+	
+	/* repeats for every item in the list */
+	while (list.remaining())
+	{
+		/* initialize variables */
+		index = list.index();
+		name = list.name();
+		
+		/* display progress */
+		printf("\r""actor %d/%d: ", index, list.max());
+		
+		/* ensure we don't exceed table limit */
+		if (index >= TBL_ACTOR_ENTRIES)
+			die("actor table limit exceeded");
+		
+		/* enter directory of list entry */
+		dir_enter(name);
+			
+		/* open conf */
+		conf = conf.new("conf.txt", "list");
+		
+		/* attempt to inject file */
+		ovl = rom.inject("*.zovl", compress);
+		
+		/* overlay loaded successfully */
+		if (ovl)
+		{
+			/* calculate overlay size */
+			vram_end = ovl_vram_sz(ovl, rom.file_sz());
+			
+			/* fall back to DEAD BEEF method if no ivar in conf */
+			if (!conf.exists("ivar"))
+			{
+				/* locate initialization variables */
+				ss =
+				find_bytes_stride(
+					ovl
+					, rom.file_sz()
+					, "DEAD****************BEEF"
+					, 4
+					, true  /* fatal error if more than one occurrence */
+				);
+				
+				/* failed to find any */
+				if (!ss)
+					die("failed to locate DEAD BEEF");
+				
+				/* initialization variable offset relative to overlay */
+				ivar = ss - ovl;
+				
+				/* overwrite 0xDEAD with index */
+				put16(ss, index);
+				
+				/* overwrite 0xBEEF with 0x0000 */
+				put16(ss + 10, 0);
+			}
+		}
+		
+		/* no overlay found */
+		else
+		{
+			vram_end = 0;
+			ivar = 0;
+		}
+		
+		/* parse conf */
+		vram = conf.get_int("vram");
+		atype = conf.get_int("allocation");
+		if (conf.exists("ivar"))
+			ivar = conf.get_int("ivar");   // ivar override
+		else
+			ivar = vram + ivar; // make relative to vram
+		conf.free();
+		
+		/* make overlay size relative to vram, thus vram_end */
+		vram_end = vram + vram_end;
+		
+		/* zero out any skipped entries */
+		skip_test(rom, index, &index_last, TBL_ACTOR, 32);
+		
+		/* go to table entry */
+		rom.seek(TBL_ACTOR + index * 32);
+		
+		/* write its table entry */
+		/* if rom.inject() failed, file offsets return 0 */
+		rom.write32(rom.file_start());  /* vrom start  */
+		rom.write32(rom.file_end());    /* vrom end    */
+		rom.write32(vram);              /* vram start  */
+		rom.write32(vram_end);          /* vram end    */
+		rom.write32(0);                 /* ram address */
+		rom.write32(ivar);              /* init vars   */
+		rom.write32(0);                 /* name addr   */
+		rom.write16(atype);             /* alloc type  */
+		
+		/* leave directory */
+		dir_leave();
+		
+		/* go to next entry in list */
+		list.next();
+	}
+	
+	/* cleanup */
+	list.free();
+	dir_leave();
+	printf("success!\n");
+}
+
+void
+particle(struct rom *rom)
+{
+	struct folder *list;
+	struct conf *conf;
+	char *name;
+	char *ovl;
+	char *ss;
+	int index_last;
+	int index;
+	int vram;
+	int vram_end;
+	int ivar;
+	int unk;
+	
+	/* particles aligned 0x10 in retail */
+	rom.align(0x10);
+	
+	/* enter and parse folder */
+	dir_enter("particle");
+	list = list.new(0);
+	if (!list.count())
+		die("particle folder is empty");
+	index_last = -1;
+	
+	/* repeats for every item in the list */
+	while (list.remaining())
+	{
+		/* initialize variables */
+		index = list.index();
+		name = list.name();
+		
+		/* display progress */
+		printf("\r""particle %d/%d: ", index, list.max());
+		
+		/* ensure we don't exceed table limit */
+		if (index >= TBL_PARTICLE_ENTRIES)
+			die("particle table limit exceeded");
+		
+		/* enter directory of list entry */
+		dir_enter(name);
+		
+		/* attempt to inject file */
+		ovl = rom.inject("*.zovl", compress);
+		
+		/* overlay loaded successfully */
+		if (ovl)
+		{
+			/* parse conf */
+			conf = conf.new("conf.txt", "list");
+			vram = conf.get_int("vram");
+			unk = conf.get_int("unknown");
+			conf.free();
+			
+			/* calculate vram end */
+			vram_end = vram + ovl_vram_sz(ovl, rom.file_sz());
+			
+			/* locate initialization variables (tuna method) */
+			ss =
+			find_text_stride(
+				ovl
+				, rom.file_sz()
+				, "tuna"
+				, 4
+				, true  /* fatal error if more than one occurrence */
+			);
+			
+			/* failed to find any */
+			if (!ss)
+				die("failed to locate 'tuna'");
+			
+			/* note initialization variable offset */
+			ivar = vram + (ss - ovl);
+			
+			/* overwrite 'tuna' with index */
+			put32(ss, index);
+		}
+		
+		/* no overlay found */
+		else
+		{
+			vram = 0;
+			vram_end = 0;
+			unk = 0;
+			ivar = 0;
+		}
+		
+		/* zero out any skipped entries */
+		skip_test(rom, index, &index_last, TBL_PARTICLE, 28);
+		
+		/* go to table entry */
+		rom.seek(TBL_PARTICLE + index * 28);
+		
+		/* write its table entry */
+		/* if rom.inject() failed, file offsets return 0 */
+		rom.write32(rom.file_start());  /* vrom start  */
+		rom.write32(rom.file_end());    /* vrom end    */
+		rom.write32(vram);              /* vram start  */
+		rom.write32(vram_end);          /* vram end    */
+		rom.write32(0);                 /* ram address */
+		rom.write32(ivar);              /* init vars   */
+		rom.write32(unk);               /* unknown     */
+		
+		/* leave directory */
+		dir_leave();
+		
+		/* go to next entry in list */
+		list.next();
+	}
+	
+	/* cleanup */
+	list.free();
+	dir_leave();
+	printf("success!\n");
+}
+
+void update_rom_pointer(char *file, int filesz, int romfilestart, int romfilesz) {
+	char *ptrdata;
+	ptrdata = find_bytes_stride(file, filesz, "DEADBEEF", 4, true);
+	if (!ptrdata)
+		die("rom pointer edit error!");
+	put32(ptrdata, romfilestart);
+	ptrdata = ptrdata + 8;
+	put32(ptrdata, romfilesz);
+}
+
+enum statics_patch_info {
+    BOOT_LOAD_STATICS_PATCH_START = 0x000011A0,
+	PADMGR_CALL_STATICS_PATCH_START = 0x00B18598,
+	MAX_STATICDATA = 48
+};
+
+void mods(struct rom* rom) {
+	struct folder *list;
+	struct conf *conf;
+	char *file;
+	char *staticdatatable;
+	char *name;
+	char *ovl;
+	int filesz;
+	int index;
+	int dtype;
+	int data1;
+	int data2;
+	
+	dir_enter("patch");
+	file = loadfile("statics.bin", &filesz, false);
+	staticdatatable = find_bytes_stride(file, filesz, "DEADBEEF04206969", 4, true);
+	if(!staticdatatable)
+		die("could not find magic number in statics");
+	dir_leave();
+	
+	dir_enter("staticdata");
+	list = list.new(0);
+	if(!list.count())
+		die("staticdata folder is empty!");
+	while(list.remaining())
+	{
+		index = list.index();
+		name = list.name();
+		printf("\r""staticdata %d/%d: ", index, list.max());
+		if(index >= MAX_STATICDATA)
+			die("staticdata limit exceeded");
+		
+		dir_enter(name);
+		rom.align(0x10);
+		ovl = rom.inject("staticdata.bin", true);
+		if(!ovl)
+			die("failed to inject staticdata %d", index);
+		
+		conf = conf.new("conf.txt", "list");
+		dtype = conf.get_int("dtype");
+		data1 = conf.get_int("data1");
+		data2 = conf.get_int("data2");
+		conf.free();
+		
+		put32(staticdatatable, rom.file_start());
+		staticdatatable = staticdatatable + 4;
+		put32(staticdatatable, (dtype << 24) | rom.file_sz());
+		staticdatatable = staticdatatable + 4;
+		put32(staticdatatable, data1);
+		staticdatatable = staticdatatable + 4;
+		put32(staticdatatable, data2);
+		staticdatatable = staticdatatable + 4;
+		
+		dir_leave();
+		list.next();
+	}
+	dir_leave();
+	list.free();
+	
+	dir_enter("patch");
+	rom.align(0x10);
+	rom.inject_raw(file, filesz, true);
+	
+    /* Patch func_800005A0 in boot to load statics */
+    file = loadfile("boot_load_statics.bin", &filesz, false);
+	if(u32op(filesz, ">", 0x9C)){
+		die("boot_load_statics patch file too big");
+	}
+	update_rom_pointer(file, filesz, rom.file_start(), rom.file_sz());
+	rom.seek(BOOT_LOAD_STATICS_PATCH_START);
+	rom.write(file, filesz);
+
+	/* Patch padmgr to call Statics_Update every frame */
+	file = loadfile("padmgr_call_statics.bin", &filesz, false);
+	if(u32op(filesz, ">", 16)){
+		die("padmgr_call_statics patch file too big");
+	}
+	if(u32op(filesz, "<", 16)){
+		die("padmgr_call_statics patch file too small");
+	}
+	rom.seek(PADMGR_CALL_STATICS_PATCH_START);
+	rom.write(file, filesz);
+	
+	dir_leave();
+	printf("success!\n");
+}
+
+int
+main(int argc, char **argv)
+{
+	struct rom *rom;
+	struct conf *rpl;
+	char *name;
+	char *comp;
+	int i;
+	
+	/* load .zzrpl */
+	rpl = rpl.new("*.zzrpl", "list");
+	name = rpl.get_str("baserom");
+	
+	/* load base rom */
+	rom = rom.new(name);
+	
+	/* compressed roms are < 64 mb */
+	if (rom.size() < 0x04000000)
+		die("cannot inject into compressed rom, what have you done");
+	
+	/* dma table (dmadata) offset and number of entries */
+	rom.dma(TBL_DMA, TBL_DMA_ENTRIES);
+	
+	/* mark files for compression */
+	rom.dma_compress(DMA_ITEM_FIELD, DMA_ITEM_LOCALIZED, true);
+	rom.dma_compress(DMA_CODE      , TBL_DMA_ENTRIES   , true);
+	
+	/* disable compression on skybox palettes (including pre-renders) */
+	i = DMA_SKYBOX_FIRST + 1;
+	while (i <= DMA_PRERENDER_LAST)
+	{
+		rom.dma_compress_one(i, false);
+		i = i + 2;
+	}
+	
+	/* mark files (and dma entries) for overwriting */
+	rom.dma_queue(DMA_OVL_TITLE, DMA_OVL_MAP_MARK_DATA); /* sys ovl */
+	rom.dma_queue(DMA_ACTOR_FIRST , DMA_ACTOR_LAST ); /* actors, fx */
+	rom.dma_queue(DMA_OBJECT_FIRST, DMA_OBJECT_LAST); /* objects    */
+	rom.dma_queue(DMA_G_PN_FIRST  , DMA_G_PN_LAST  ); /* g_pn_x     */
+	rom.dma_queue(DMA_SCENE_FIRST , DMA_SCENE_LAST ); /* scenes     */
+	rom.dma_queue(DMA_UNUSED_FIRST, DMA_UNUSED_LAST); /* unused     */
+	rom.dma_queue(DMA_BLANK_FIRST , DMA_BLANK_LAST ); /* remainder  */
+	
+	/* NOTE: if none of your scenes will use prerendered *
+	 *       skyboxes, mark them as well so their space  *
+	 *       can be put to good use                      */
+	
+	/* finished initializing dma settings */
+	rom.dma_ready();
+	
+	/* construct rom */
+	systemdir(rom);
+	actor(rom);
+	particle(rom);
+	object(rom);
+	scene(rom);
+	mods(rom);
+	route(rom);
+	
+	/* write built rom */
+	rom.save("build.z64");
+	
+	/* cleanup */
+	rom.free();
+	rpl.free();
+	return 0;
+}

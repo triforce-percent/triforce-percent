@@ -1,0 +1,22 @@
+# Patching Spiritual Stones actor to always treat Link as child, and not load them when warped in
+# Base addr
+8092ACC0
+# reloc table header offset
+!000056A0
+
+# Old version
+#init
+#8092AD4C addiu t7, zero, 1
+
+# MNGoldenEagle version
+8092ad48 addiu at, zero, 7
+8092ad4c lui t9, 1
+8092ad50 lui t7, 0x8093
+!8092ad54 nop
+8092ad58 addu t9, t9, a0
+8092ad5c addiu t7, t7, 0xe058
+!8092ad60 sw t7, 0x184(s0)
+8092ad64 lbu t9, 0x1dea(t9)
+8092ad68 bne t9, at, 0x8092ad74
+8092ad6c lh t0, 0xa4(a0)
+8092ad70 sw zero, 0x130(s0)

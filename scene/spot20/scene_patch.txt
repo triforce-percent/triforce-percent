@@ -1,0 +1,7 @@
+0
+2F80 .include LonLonFlyover.bin
+5457 .byte 0x76
+548C .byte 1
+548E .byte 0
+5491 .byte 12
+5496 .short 0x01AC

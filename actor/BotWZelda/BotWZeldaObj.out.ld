@@ -1,0 +1,16 @@
+BotWZeldaMesh = 0x600d760;
+BotWZeldaMeshDescendidleAnim = 0x600e124;
+BotWZeldaMeshHoldinghandsAnim = 0x601009c;
+BotWZeldaMeshIknowtheyreoutthereAnim = 0x6012bbc;
+BotWZeldaMeshLinkitseemsyouveAnim = 0x60157b4;
+BotWZeldaMeshLookpointAnim = 0x60162d8;
+BotWZeldaMeshNormalidleAnim = 0x6016d10;
+BotWZeldaMeshRotatedidleAnim = 0x6017614;
+BotWZeldaMeshThankyoulinkAnim = 0x6018dbc;
+BotWZeldaMeshTurnrightAnim = 0x6019598;
+BotWZeldaMeshWakeupAnim = 0x6019b58;
+BotWZeldaMeshYouaskedAnim = 0x601b55c;
+mat_BotWZeldaMesh_N_Dress_layerOpaque = 0x600cf28;
+BotWZeldaEye0Tex = 0x601b570;
+BotWZeldaEye1Tex = 0x601bd70;
+BotWZeldaEye2Tex = 0x601c570;

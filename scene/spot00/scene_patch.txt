@@ -1,0 +1,4 @@
+0
+DCB0 .include HyruleFieldFlyover.bin
+12187 .byte 0x76
+121E2 .short 5105 -160 8467 0 0xC000

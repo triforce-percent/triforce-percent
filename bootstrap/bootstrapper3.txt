@@ -1,0 +1,13 @@
+New Bootstrapper 3 is the same as BS1, except we're now executing from the
+context of padmgr_HandleRetraceMsg (func_800A25DC)--at 3x the speed.
+Important: a0 is set by the injected code which jumps to controllers
+a0 = 80700000 = most of the way through expansion pak
+Writing BS4 to 80700004; address counter is at 80700000
+
+Unused memory:
+//tried and failed: 8011DDA0 - 8011E640 (8011E400)
+//seems to have failed: 8011CBC0 - 8011CF0F (8011CBC0)
+//tried and failed: 80115DE0 - 80118670 (80118100)
+
+Basically the difference with BS1 is that we`re now using a0 instead of s1, and the starting offset is different
+And also, BS1 is 3 frames of the same thing repeatedly, whereas BS3 is single frames

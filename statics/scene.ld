@@ -1,0 +1,14 @@
+sceneDrawConfigJumpTable = 0x800FBD18;
+Object_InitBank = 0x800813D4;
+Object_InitBank_AfterSpaceSize = 0x80081480;
+bgCheckSceneMemList = 0x800EC0E4;
+DemoTerminatorTable = 0x8010736C;
+DemoTerminatorReturn = 0x80054C3C;
+DemoMiscTable = 0x801072E0;
+DemoMiscReturn = 0x80052D00;
+func_80080BA4 = 0x80080BA4;
+func_80052364 = 0x80052364;
+func_800523B0 = 0x800523B0;
+Statics_CameraSplinePatch_ret = 0x80099BF4;
+Environment_PlaySceneSequence = 0x800617DC;
+Scene_Cmd0x15SoundSettings = 0x80082478;

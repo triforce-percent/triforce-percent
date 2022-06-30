@@ -1,0 +1,2 @@
+e8c986d6e834951945fae0d7b6d16349 scene.zscene.orig
+63b82e2029f25c7c117dc0cef1e0082e room_0.zmap.orig

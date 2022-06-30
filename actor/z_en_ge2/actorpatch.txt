@@ -1,0 +1,6 @@
+# Base address
+80B239A0
+# Dialogue chooser
+80B24B50 jal Statics_Ge2DialogueUpdate
+80B24B98 jal Statics_Ge2DialogueGet
+80B24B9C nop

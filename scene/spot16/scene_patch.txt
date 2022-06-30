@@ -1,0 +1,3 @@
+0
+6550 .include DeathMountainTrail.bin
+7CE7 .byte 0x76

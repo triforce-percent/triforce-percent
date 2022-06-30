@@ -1,0 +1,9 @@
+RauruStair = 0x6000b28;
+RauruStairCollision_collisionHeader = 0x6000e00;
+SariaStair = 0x6001c30;
+SariaStairCollision_collisionHeader = 0x6002058;
+SheikStair = 0x6003598;
+SheikStairCollision_collisionHeader = 0x6003d08;
+TriforceFadeWall = 0x60049e0;
+TriforceHallway = 0x6006e78;
+TriforceDoor = 0x60078d8;

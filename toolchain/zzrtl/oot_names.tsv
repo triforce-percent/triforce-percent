@@ -1,0 +1,472 @@
+index	inhex	scene	object	actor	particle (TODO)
+0	0x0000	Dungeon - Inside the Deku Tree	(intentionally blank)	Player	
+1	0x0001	Dungeon - Dodongo's Cavern	gameplay_keep - Global Gameplay Objects	Empty - (unused)	
+2	0x0002	Dungeon - Inside Jabu-Jabu's Belly	gameplay_field_keep - Global Field Objects	Stalfos	
+3	0x0003	Dungeon - Forest Temple	gameplay_dangeon_keep - Global Dungeon Objects	Empty - (unused)	
+4	0x0004	Dungeon - Fire Temple	(unused)	Shop Inventory Data	
+5	0x0005	Dungeon - Water Temple	(unused)	Empty - (unused)	
+6	0x0006	Dungeon - Spirit Temple	Aria (unused)	Empty - (unused)	
+7	0x0007	Dungeon - Shadow Temple	Octorok	En_Part	
+8	0x0008	Dungeon - Bottom of the Well	Guay	Flame	
+9	0x0009	Dungeon - Ice Cavern	Poe	Wooden Door	
+10	0x000A	Dungeon - Ganon's Tower	Great Fairy	Treasure Chest	
+11	0x000B	Dungeon - Gerudo Training Ground	Floormaster & Wallmaster	Great Fairy	
+12	0x000C	Dungeon - Thieves' Hideout	Dodongo	Proximity-Activated Firewall	
+13	0x000D	Dungeon - Inside Ganon's Castle	Keese	Graveyard Poe & Composer Brothers	
+14	0x000E	Misc - Tower Escape Interior	Treasure Chest	Octorok	
+15	0x000F	Misc - Tower Escape Interior (Second Phase)	Dancing Flame (unused)	Spiderweb	
+16	0x0010	Game - Treasure Box Shop	(unused)	Bomb Field Model	
+17	0x0011	Boss - Gohma	(unused)	Wallmaster	
+18	0x0012	Boss - King Dodongo	Shabom	Dodongo	
+19	0x0013	Boss - Barinade	Cucco	Keese	
+20	0x0014	Boss - Phantom Ganon	Adult Link	Adult Epona	
+21	0x0015	Boss - Volvagia	Child Link	Collectible Items (Visible)	
+22	0x0016	Boss - Morpha	Tektites	En_Arrow	
+23	0x0017	Boss - Twinrova	Leever	Empty - (unused)	
+24	0x0018	Boss - Bongo Bongo	Peahat	Navi & Healing Fairy	
+25	0x0019	Boss - Ganondorf	King Dodongo	Friendly Cucco	
+26	0x001A	Misc - Tower Escape Exterior	Epona	Empty - (unused)	
+27	0x001B	PR - Market Entrance Day	Lizalfos & Dinolfos	Tektite	
+28	0x001C	PR - Market Entrance Night	Gohma	Leever	
+29	0x001D	PR - Market Entrance Ruins	Child Zelda	Peahat	
+30	0x001E	PR - Back Alley Day	Gohma Larva	Butterfly	
+31	0x001F	PR - Back Alley Night	Baby Dodongo	Empty - (unused)	
+32	0x0020	PR - Market Day	Dark Link	Bug	
+33	0x0021	PR - Market Night	Biri	Fish	
+34	0x0022	PR - Market Ruins	Tailpasaran	Empty - (unused)	
+35	0x0023	PR - Temple of Time Exterior Day	Kakariko Rooftop Man [Early] (unused)	Room Transition Plane	
+36	0x0024	PR - Temple of Time Exterior Night	Skulltulas	En_Scene_Change	
+37	0x0025	PR - Temple of Time Exterior Ruins	Torch Slug	Lizalfos & Dinalfos	
+38	0x0026	House - Know-It-All	Stingers	Flagpole	
+39	0x0027	House - Twins	Generic Horse	King Dodongo	
+40	0x0028	House - Mido	Bazaar Proprietor [Early] (unused)	Gohma	
+41	0x0029	House - Saria	NPC Animations I	Child Zelda (Cutscene 05 & 06)	
+42	0x002A	House - Carpenter Boss	Kokiri Forest Objects	En_Viewer	
+43	0x002B	House - Alley Green Man	Dodongo's Cavern Objects	Gohma Larva	
+44	0x002C	Shop - Bazaar	Fire Temple Objects	Bg_Pushbox	
+45	0x002D	Shop - Kokiri	Ganondorf's Horse	Shabom	
+46	0x002E	Shop - Goron	Zora [Early] (unused)	Door Shutter	
+47	0x002F	Shop - Zora	Hyrule Field Objects (Child)	Baby Dodongo	
+48	0x0030	Shop - Potion Kakariko	Moblins	King Dodongo's Fire	
+49	0x0031	Shop - Potion Market	Bomb Flower	Empty - (unused)	
+50	0x0032	Shop - Bombchu	Stalfos	Boomerang Field Model	
+51	0x0033	Shop - Mask	Mido I [Early] (unused)	Dark Link	
+52	0x0034	House - Link	NPC Animations II	Biri	
+53	0x0035	House - Alley Dog Lady	Red-Haired Kokiri Girl [Early]	Tailpasaran	
+54	0x0036	House - Stable	Inside the Deku Tree Objects	Empty - (unused)	
+55	0x0037	House - Impa	Phantom Ganon	Skulltula	
+56	0x0038	House - Laboratory	Armos	Torch Slug	
+57	0x0039	House - Tent	Deku Babas	Directional Sign & Square Sign [Early]	
+58	0x003A	House - Dampe	(unused)	Land Stinger	
+59	0x003B	Fountain - Great Fairy Upgrades	Impa's Masked Head [Early] (unused)	Sound Effects I	
+60	0x003C	Fountain - Normal	Laughing Man [Early] (unused)	Generic Horse	
+61	0x003D	Fountain - Great Fairy Spells	Hylian Woman in Purple Dress [Early] (unused)	En_Ossan	
+62	0x003E	Misc - Grottos	Hylian Man in Blue Shirt & Orange Pants [Early] (unused)	Deku Tree's Jaw	
+63	0x003F	Grave - Redead	Hylian Woman in White Shirt & Orange Pants [Early] (unused)	Dead Dodongo's Jaw	
+64	0x0040	Grave - Fountain	Jabu-Jabu	Fire Temple Breakable Hammer Block	
+65	0x0041	Grave - Royal Family's Tomb	Old Hylian Man [Early] (unused)	Fire Temple Hammer-Activated Elevator Pillar	
+66	0x0042	Game - Shooting Gallery	Old Hylian Man's Head [Early] (unused)	Ganondorf's Horse	
+67	0x0043	World - Temple of Time	Hylian Man in Purple Shirt & Green Pants [Early] (unused)	Fire Temple Fire-Powered Elevator Block	
+68	0x0044	World - Chamber of Sages	Carpenter Boss's Wife [Early] (unused)	Fire Temple Rotating Fire Spinner	
+69	0x0045	World - Castle Maze Day	Hylian Woman in Blue Shirt & White Dress [Early] (unused)	Fire Temple Flame-Spouting Statue	
+70	0x0046	World - Castle Maze Night	Zelda's Horse	Fire Temple Clover Platform	
+71	0x0047	Misc - Cutscene Map	Opening Cutscene Animations	Fire Temple Fire-Powered Mini-Boss Room Face Elevator	
+72	0x0048	World - Windmill & Dampe's Grave	Warp Circle & Rupee Prism	Sheik	
+73	0x0049	World - Fishing Pond	Heart Container [Early] (unused)	Circle of Flames	
+74	0x004A	World - Zelda's Courtyard	Mad Scrub	Drawbridge	
+75	0x004B	Game - Bombchu Bowling	Saria [Early] (unused)	Moblin	
+76	0x004C	House - Ranch & Silo	Red-Haired Kokiri Boy I [Early] (unused)	Bomb Flower	
+77	0x004D	House - Guard	Gerudo Training Ground Objects	Adult Zelda (Cutscenes)	
+78	0x004E	House - Witch	Fado [Early] (unused)	Hookshot Elevator	
+79	0x004F	Boss - Beast Ganon	Kokiri Girl in Brown Band's Head [Early] (unused)	Kokiri Girl [Early] (unused)	
+80	0x0050	House - Skulltula	Kokiri Boy in Green Cap's Head [Early] (unused)	Bg_Ydan_Hasi	
+81	0x0051	World - Hyrule Field	Kokiri Girl in Green Band's Head [Early] (unused)	Deku Tree Spiked Log & Dropdown Ladder	
+82	0x0052	World - Kakariko Village	Kokiri Boy in Mint Cap's Head [Early] (unused)	Phantom Ganon	
+83	0x0053	World - Graveyard	Kokiri Shop Proprietor's Head [Early] (unused)	Empty - (unused)	
+84	0x0054	World - Zora's River	Kokiri Girl in Green Cap's Head [Early] (unused)	Armos	
+85	0x0055	World - Kokiri Forest	Fado's Head [Early] (unused)	Deku Baba	
+86	0x0056	World - Sacred Forest Meadow	Bari	Deku Nut Effect	
+87	0x0057	World - Lake Hylia	Soldier [Early] (unused)	Spin Attack Effects	
+88	0x0058	World - Zora's Domain	Soldier (Courtyard) [Early] (unused)	Dodongo's Cavern Elevator Platform	
+89	0x0059	World - Zora's Fountain	Water Temple Objects	Bombable Wall	
+90	0x005A	World - Gerudo Valley	Phantom Ganon's Horse & Objects	Jabu-Jabu	
+91	0x005B	World - Lost Woods	Shooting Gallery & Bazaar Proprietors	Zelda's Horse	
+92	0x005C	World - Desert Colossus	Forest Temple Room 13 (Twisted)	Dodongo's Cavern Bombable Stairs	
+93	0x005D	World - Gerudo's Fortress	Bubbles	Blue Warp & Rupee-Shaped Prism	
+94	0x005E	World - Haunted Wasteland	Temple of Time Objects	Torch Stand (Generic)	
+95	0x005F	World - Hyrule Castle	Flying Floor Tile	Heart Container	
+96	0x0060	World - Death Mountain Trail	Adult Zelda	Mad Scrub	
+97	0x0061	World - Death Mountain Crater	Warp Pad Base	Rotating Ring	
+98	0x0062	World - Goron City	Light Warp Pad	Statue Eye Targets	
+99	0x0063	World - Lon Lon Ranch	Shadow Warp Pad	Bari	
+100	0x0064	World - Ganon's Tower	Fire Warp Pad	Bg_Mizu_Movebg	
+101	0x0065	Test - Jungle Gym	Water Warp Pad	Water Temple Water	
+102	0x0066	Test - Strongbox Warp	Spirit Warp Pad	Hookshot Field Model	
+103	0x0067	Test - Depth Test	Forest Warp Pad	Phantom Ganon's Horse	
+104	0x0068	Test - Stalfos Miniboss	Ocarina Pedestal [Early] (unused)	Forest Temple Twisting Corridor	
+105	0x0069	Test - Stalfos Boss	Shadow Temple Objects	Bubble	
+106	0x006A	Test - Obsolete	Lake Hylia Objects	Temple of Time Window Light Rays	
+107	0x006B	Test - Hedge Maze	Ice Cavern Objects	Flying Floor Tile	
+108	0x006C	Test - SRD Grass Test	Dampé's Relay Race Objects	Master Sword	
+109	0x006D	Test - Treasure Room	Big Poe & Poe Guide	Phantom Ganon's Lightning	
+110	0x006E		Sharp & Flat	Warp Pad & Ocarina Pedestal	
+111	0x006F		Forest Temple Room 13 (Straight)	Metal Bars	
+112	0x0070		Forest Temple Room 14 (Straight)	Door of Time Collision Model	
+113	0x0071		Forest Temple Room 14 (Twisted)	Hammer-Activated Steps	
+114	0x0072		Forest Temple Objects	Brown Bird (unused)	
+115	0x0073		Forest Temple Textures	Empty - (unused)	
+116	0x0074		Zora's Fountain Objects	Empty - (unused)	
+117	0x0075		[Blank] (unused)	Empty - (unused)	
+118	0x0076		Flagpole	Empty - (unused)	
+119	0x0077		Brown Bird (unused)	Trees & Bushes	
+120	0x0078		(unused)	Empty - (unused)	
+121	0x0079		(unused)	Empty - (unused)	
+122	0x007A		(unused)	Empty - (unused)	
+123	0x007B		(unused)	Empty - (unused)	
+124	0x007C		Bushes & Trees	Grey Rectangular Block (unused)	
+125	0x007D		(unused)	Grey Rectangular Stone Block (unused)	
+126	0x007E		(unused)	Empty - (unused)	
+127	0x007F		(unused)	Empty - (unused)	
+128	0x0080		(unused)	Blade Trap	
+129	0x0081		Rectangular Stone Blocks (Light Grey) (unused)	Arrow-Deflecting Trap (unused)	
+130	0x0082		Rectangular Stone Blocks (Dark Grey) (unused)	Orange Pot (unused)	
+131	0x0083		(unused)	Empty - (unused)	
+132	0x0084		(unused)	Talon	
+133	0x0085		Blade Trap	Dampé	
+134	0x0086		Orange Pot (unused)	Forest Temple Bow Room Platform	
+135	0x0087		Impa	Forest Temple Sun Elevator	
+136	0x0088		Talon	Forest Temple Rotating Pre-Boss Room	
+137	0x0089		Dampé & Ghost	Forest Temple Collapsing Checkerboard Ceiling	
+138	0x008A		Sheik	Beamos	
+139	0x008B		Beamos	Demo_Effect	
+140	0x008C		Barinade	Demo_Kankyo	
+141	0x008D		Bottom of the Well Objects	Fire Temple Big Fire Wall	
+142	0x008E		[todo]	Floormaster	
+143	0x008F		Goddesses' Flame of Creation	Soldier (Castle Hedge Maze)	
+144	0x0090		[Blank] (unused)	Redead & Gibdo	
+145	0x0091		Goddess Light Dome	En_Po_sisters	
+146	0x0092		Light Beam & Rubble	Golden Gauntlets Rock	
+147	0x0093		Golden Goddesses	Bg_Po_Event	
+148	0x0094		Jagged-Edged Light Ring	Group of Bugs, Fish, Butterflies	
+149	0x0095		Triforce & Beam of Light	Skullwalltula	
+150	0x0096		Inside Jabu-Jabu's Belly Objects	Volvagia (Flying)	
+151	0x0097		Soldiers	Object_Kankyo	
+152	0x0098		Redead & Gibdo	Darunia	
+153	0x0099		Poe Sisters & Objects	Flare Dancer	
+154	0x009A		Golden Gauntlets Boulder	Child Epona	
+155	0x009B		Ganondorf (Cutscenes)	Grotto Hole	
+156	0x009C		Volvagia (Flying)	Graveyard Objects	
+157	0x009D		Darunia	Gravestone	
+158	0x009E		Flare Dancer	Farore's Wind Effect	
+159	0x009F		Medallions [Early] (unused)	Din's Fire Effect	
+160	0x00A0		Child Epona	Empty - (unused)	
+161	0x00A1		Graveyard Objects	Child Ruto	
+162	0x00A2		Gravestone	Volvagia (Whack-a-Mole)	
+163	0x00A3		Child Ruto	Flare Dancer's Fireball	
+164	0x00A4		Torches	Dead Hand	
+165	0x00A5		Volvagia (Whack-a-Mole)	Dead Hand's Hands	
+166	0x00A6		Dead Hand & Hands	Rauru	
+167	0x00A7		Rauru	Enemy Spawner	
+168	0x00A8		Time Block Disappearance Effect	Darunia	
+169	0x00A9		[Blank] (unused)	Impa	
+170	0x00AA		Item Model - Small Key	Treasure Chest Glow	
+171	0x00AB		Mirror Shield's Light Reflection	Flare Dancer Core	
+172	0x00AC		Jelly Platform	Volvagia's Sinking Platform	
+173	0x00AD		Item Model - Spiritual Stones	Volvagia's Rock Attack	
+174	0x00AE		Gerudo Valley Objects	Bg_Haka_Megane	
+175	0x00AF		Goron City Objects	Invisible Wall	
+176	0x00B0		Boss Doors	Charon's Boat	
+177	0x00B1		Death Mountain Crater Objects	Spinning Scythes	
+178	0x00B2		Shop Shelves	Empty - (unused)	
+179	0x00B3		Nabooru	Soldier (Castle Gate, Zelda's Courtyard, Kakariko Village)	
+180	0x00B4		Morpha	Falling Boulder Spawner	
+181	0x00B5		Shellblade	Flaming Debris	
+182	0x00B6		Item Model - Music Notes (unused)	Stunnable Jelly Platform	
+183	0x00B7		Item Model - Recovery Heart	Reflectable Ray of Light	
+184	0x00B8		Item Model - Compass	Gerudo Valley Objects	
+185	0x00B9		Item Model - Big Key	Goron City Objects	
+186	0x00BA		Item Model - Medallions	Barinade	
+187	0x00BB		Item Model - Deku Nut	Shadow Temple Flaming Skull Vase	
+188	0x00BC		Saria	Shadow Temple Guillotine	
+189	0x00BD		Item Model - Heart Container & Piece of Heart	Shadow Temple Coffin Lid	
+190	0x00BE		Item Model - Quivers	Bg_Haka_Zou	
+191	0x00BF		Item Model - Bomb Bags	Death Mountain Crater Smoke Plume	
+192	0x00C0		Ingo	Shooting Gallery Items	
+193	0x00C1		Kotake & Koume	Shooting Gallery Proprietor	
+194	0x00C2		Death Mountain Trail Objects	Shop Shelves	
+195	0x00C3		Mido II [Early] (unused)	Nabooru	
+196	0x00C4		Red-Haired Kokiri Boy II [Early] (unused)	Morpha	
+197	0x00C5		NPC Animations III	Shellblade	
+198	0x00C6		Item Model - Empty Bottle	Big Octorok	
+199	0x00C7		Item Model - Deku Stick	Wilted Deku Baba	
+200	0x00C8		Item Model - Dungeon Map & Stone of Agony	Inside Jabu-Jabu's Belly Objects	
+201	0x00C9		Goron, Medigoron, Biggoron	Saria (Cutscenes)	
+202	0x00CA		Adult Ruto	Generic Goron (Cutscenes)	
+203	0x00CB		Item Model - Deku Shield	Ingo	
+204	0x00CC		Deku Tree Sprout	Kotake & Koume	
+205	0x00CD		Item Model - Magic Jars	Dodongo's Cavern Boulder Blockade	
+206	0x00CE		Item Model - Bomb	Empty - (unused)	
+207	0x00CF		Goron [Early] (unused)	Bombable Wall & Cracked Floor (Fire Temple)	
+208	0x00D0		Adult Malon	Bombable Wall (Death Mountain Trail)	
+209	0x00D1		Item Model - Wallets	Drifting Ice Platform	
+210	0x00D2		Ingo's Horse & Archery Range Horse	Adult Ruto	
+211	0x00D3		Twinrova	Deku Tree Sprout	
+212	0x00D4		Like Like	Water Current	
+213	0x00D5		Parasitic Tentacle & Tentacle Obstruction	Lake Hylia Objects	
+214	0x00D6		Anubis & Fire Trap	Ice Cavern Objects	
+215	0x00D7		Item Model - Gerudo Card	Bottom of the Well Moat Water	
+216	0x00D8		Item Model - Arrows	Empty - (unused)	
+217	0x00D9		Item Model - Bombchu	Adult Malon (Stable & Lon Lon Ranch - Ingo Ousted)	
+218	0x00DA		Item Model - Pocket & Weird Eggs	Bombchu Field Model	
+219	0x00DB		Item Model - Silver & Golden Scales	En_Horse_Game_Check	
+220	0x00DC		Item Model - Hylian Shield	Twinrova	
+221	0x00DD		Item Model - Hookshot & Longshot	Like Like	
+222	0x00DE		Item Model - Ocarina of Time	Parasitic Tentacle	
+223	0x00DF		Item Model - Lon Lon Milk	Tentacle Obstruction	
+224	0x00E0		Child Malon	Anubis	
+225	0x00E1		Ganondorf (Boss)	Anubis-Killing Fire Trap	
+226	0x00E2		Bongo Bongo	Forest Temple Dropdown Ladder	
+227	0x00E3		Spike Trap [Duplicate] (unused)	Forest Temple Rotating Lava Room Platforms	
+228	0x00E4		(unused)	Forest Temple Well Path Water	
+229	0x00E5		Spike Trap	Death Mountain Cloud Ring	
+230	0x00E6		Frog	Jabu-Jabu's Belly Switch	
+231	0x00E7		Item Model - Fairy Slingshot	Child Malon	
+232	0x00E8		Item Model - Boomerang	Ganondorf	
+233	0x00E9		Item Model - Fairy Bow	Bongo Bongo	
+234	0x00EA		Item Model - Lens of Truth	Empty - (unused)	
+235	0x00EB		Item Model - Potions	Empty - (unused)	
+236	0x00EC		Kakariko Rooftop Man	Spike Trap	
+237	0x00ED		Chamber of the Sages Cutscene Objects	Frog	
+238	0x00EE		Item Model - Mirror Shield	Collectible Deku Shield	
+239	0x00EF		Item Model - Zelda's Letter	Meltable Ice Covering	
+240	0x00F0		Hyrule Castle Objects	Blue Fire	
+241	0x00F1		Spirit Temple Objects	Collectible Ocarina of Time	
+242	0x00F2		Item Model - Tunics	Empty - (unused)	
+243	0x00F3		Item Model - Magic Bean	Empty - (unused)	
+244	0x00F4		Item Model - Fish	Nayru's Love Effect	
+245	0x00F5		Item Model - Poacher's Saw	Sage Light Orbs	
+246	0x00F6		Item Model - Megaton Hammer	Anubis Spawner	
+247	0x00F7		Item Model - Reed Whistle (unused)	Bg_Haka_Gate	
+248	0x00F8		Item Model - Giant's Knife & Biggoron's Sword	Hyrule Castle Gate	
+249	0x00F9		Kakariko Village Objects (Shared)	Rolling Boulder (Spirit Temple)	
+250	0x00FA		Mido [Duplicate] (unused)	Spirit Temple Shifting Wall	
+251	0x00FB		Mido	Empty - (unused)	
+252	0x00FC		Red-Haired Kokiri Boy	Snake Statue	
+253	0x00FD		Red-Haired Kokiri Girl	Mesh Bridge	
+254	0x00FE		Zora	Fishing Pond & Proprietor	
+255	0x00FF		King Zora	Pushblock	
+256	0x0100		Horse-Jumping Fence	Gate to Death Mountain Trail	
+257	0x0101		Kokiri Shop Proprietor Animations	Dust Particles	
+258	0x0102		Kokiri Shop Proprietor's Head	Kakariko Village Windmill Blades	
+259	0x0103		Goron Shop Proprietor Animations	Kakariko Village Well Crossbeam	
+260	0x0104		Zora Shop Proprietor Animations	Kakariko Village Well Water	
+261	0x0105		Dog Lady	Torch Stand (Poe Sisters)	
+262	0x0106		Iron Knuckle	Ganondorf's Lair Floor Tile	
+263	0x0107		Hylian Men I	Lon Lon Milk Crate	
+264	0x0108		Young Hylian Women	Horse Jumping Fence	
+265	0x0109		Item Model - Cuccos	Empty - (unused)	
+266	0x010A		Skull Kid	Collectible Fire Arrows	
+267	0x010B		Item Model - Ruto's Letter	Collectible Ice Arrows	
+268	0x010C		Old Hylian Men	Collectible Light Arrows	
+269	0x010D		Old Hylian Woman	Empty - (unused)	
+270	0x010E		Item Model - Fairy Ocarina (unused)	Empty - (unused)	
+271	0x010F		Potion Shop Granny	Collectible Quest Items	
+272	0x0110		Cucco Lady	Small Wooden Crate	
+273	0x0111		Hylian Men II	Pot	
+274	0x0112		Zora's River Objects	Collectible Field Items (Invisible)	
+275	0x0113		Zora's Domain Objects	Iron Knuckle (Field Enemy)	
+276	0x0114		Freezard	Iron Knuckle (Cutscenes)	
+277	0x0115		Carpenter Boss's Wife	Skullkid	
+278	0x0116		Gerudo in White	Skullkid's Needle	
+279	0x0117		Minigame Points	Silver Rupee	
+280	0x0118		Item Model - Iron Boots	Kotake & Koume's Portal	
+281	0x0119		Item Model - Deku Seeds	Bongo Bongo's Shadow	
+282	0x011A		Ganondorf's Magic Blast	Business Scrub (Surrendered)	
+283	0x011B		Stone Elevator Pillar (unused)	Navi Message (Automatically Triggered)	
+284	0x011C		Hookshot Pillar & Wall Target	Flame-Shooting Eye Switch	
+285	0x011D		Stone Moving Deku Tree Platform	Flying Pot	
+286	0x011E		Magic Bean Objects	Obj_Ice_Poly	
+287	0x011F		Rolling Boulder	Zora's River Waterfall	
+288	0x0120		(unused)	Zora's Domain Waterfall	
+289	0x0121		Carpenter Boss	Freezard	
+290	0x0122		Carpenters	Dampé's Ghost	
+291	0x0123		(unused)	Dampé's Relay Objects	
+292	0x0124		Cucco Chick (unused)	Diving Game Zora	
+293	0x0125		Dark Link's Illusion Room	Grass Clump & Regenerating Grass	
+294	0x0126		Medigoron Animations	Bean Planting Spot	
+295	0x0127		Magic Bean Seller	Bombable Boulder	
+296	0x0128		Carpenter Boss's Son	Empty - (unused)	
+297	0x0129		Ingo's Ranch Gate	Empty - (unused)	
+298	0x012A		Sun Switch	Bronze, Diamond, Eye Switch	
+299	0x012B		Grass	Stone Elevator	
+300	0x012C		Pot	Deku Tree Elevator	
+301	0x012D		Item Model - Silver & Golden Gauntlets	Hookshot Target Pillar	
+302	0x012E		Item Model - N Coins (unused)	Ocarina Spot	
+303	0x012F		Square Signpost	En_Yabusame_Mark	
+304	0x0130		Ganon's Castle Exterior Objects	Rolling Boulder (Generic)	
+305	0x0131		Kaepora Gaebora	Deku Target Game Rupee	
+306	0x0132		Lake Scientist	Carpenter Boss	
+307	0x0133		Windmill Man	Carpenter (Thieves' Hideout & Carpenters' Tent)	
+308	0x0134		Item Model - Keaton Mask	Empty - (unused)	
+309	0x0135		Item Model - Redead Mask	Cucco Chick	
+310	0x0136		Item Model - Spooky Mask	Dark Link's Illusion Room	
+311	0x0137		Item Model - Bunny Hood	Item_Inbox	
+312	0x0138		Item Model - Mask of Truth	Gerudo in White	
+313	0x0139		Ganon's Tower Objects	Obj_Blockstop	
+314	0x013A		Water Spout (Small)	Dynamic Shadow	
+315	0x013B		Water Spout (Large)	Arwing (unused)	
+316	0x013C		Running Man	Cucco Lady	
+317	0x013D		Fado	Medigoron	
+318	0x013E		Happy Mask Salesman	Magic Bean Seller	
+319	0x013F		Item Model - Eyedrops	Carpenter Boss's Son (Lost Woods)	
+320	0x0140		Item Model - Odd Potion	Gate to Ingo's Ranch	
+321	0x0141		Item Model - Odd Mushroom	Square Sign	
+322	0x0142		Item Model - Claim Check	Soldier (Hyrule Castle)	
+323	0x0143		Item Model - Broken Goron's Sword & Giant's Knife	En_Syateki_Niw	
+324	0x0144		Carpet Merchant	Cucco (Attacking)	
+325	0x0145		Graveyard Boy	Well Stopper	
+326	0x0146		Item Model - Prescription	Saria (Gameplay)	
+327	0x0147		Item Model - Goron Bracelet	Checkable Green Navi Spot	
+328	0x0148		Item Model - SOLD OUT	Rainbow Bridge	
+329	0x0149		Item Model - Eyeball Frog	Potion Shop Granny	
+330	0x014A		Title Logo	Lake Scientist	
+331	0x014B		Thieves' Hideout Cell Door	Bombchu Bowling Alley Employee	
+332	0x014C		Ganon's Tower Exterior (Collapsing) Objects	En_Bom_Bowl_Pit	
+333	0x014D		Death Mountain Eruption Effects	Kaepora Gaebora	
+334	0x014E		Adult Zelda Animations I	Silver Gauntlets Boulder	
+335	0x014F		Adult Zelda Animations II	Graveyard Flower, Rock & Grass Pulled by Kokiri	
+336	0x0150		Item Model - Goron Mask	Sun Switch	
+337	0x0151		Item Model - Zora Mask	Groups of Rocks & Grass Clumps	
+338	0x0152		Item Model - Gerudo Mask	Generic Goron [Early]	
+339	0x0153		Ganon	Windmill Man	
+340	0x0154		Pierre & Bonooru	Empty - (unused)	
+341	0x0155		Treasure Chest Shop Proprietor	Treasure Chest (Treasure Chest Shop)	
+342	0x0156		Ganon's Tower Door Bars	Goddess Statue	
+343	0x0157		Item Model - Hover Boots	Ceiling Elevator	
+344	0x0158		Item Model - Magic Arrows	Ceiling Mirror	
+345	0x0159		Potion Shop Proprietor	Bombable Bombchu Boulder	
+346	0x015A		Ending Cutscene Animations	Hookshot Grate	
+347	0x015B		Fishing Pond Objects	Bg_Jya_Bombiwa	
+348	0x015C		Item Model - Gold Skulltula Token	Spinning Goron Vase	
+349	0x015D		Item Model - Goddess Spells	Empty - (unused)	
+350	0x015E		Skulltula House Residents	Ganondorf's Organ	
+351	0x015F		Big Octo	Small Water Spout	
+352	0x0160		Bombchu Bowling Employee	Big Water Spout	
+353	0x0161		Sacred Forest Meadow Objects	Empty - (unused)	
+354	0x0162		Gerudo's Fortress Objects	Running Man (Hyrule Field & Ending)	
+355	0x0163		Bombable Boulder	Kokiri Spawner	
+356	0x0164		Hint-Giving Deku Scrub	King Zora	
+357	0x0165		Bombchu Shop Proprietor	Weather-Changing Tag	
+358	0x0166		Hyrule Field Objects (Adult)	Bongo Bongo's Drum Head	
+359	0x0167		Gerudo in Purple	Man on Kakariko Rooftop	
+360	0x0168		Business Scrub	Bombchu Bowling Prizes	
+361	0x0169		Gerudo Fighter & Second-in-Command	Iron Knuckle Throne & Columns	
+362	0x016A		Cucco-Chasing Girl	Carpet Merchant	
+363	0x016B		Dog	Carpet Merchant's Magic Carpet	
+364	0x016C		Destructable Iron Knuckle Objects	Graveyard Boy	
+365	0x016D		Spirit Temple Door & Iron Bars	Mido	
+366	0x016E		(unused)	Hylian Spawner	
+367	0x016F		Desert Colossus Objects	Ganondorf's Cape	
+368	0x0170		Large Wooden Crate	Song of Storms Effect	
+369	0x0171		Forest Stage Judge	Title Screen Overlay	
+370	0x0172		Forest Stage Patron	Thieves' Hideout Cell Door	
+371	0x0173		Item Model - Blue Fire	Navi Message (Targetable)	
+372	0x0174		Item Model - Bug	Ganon's Tower Exterior (Collapsing) Objects	
+373	0x0175		Item Model - Butterfly (unused)	Big Poe	
+374	0x0176		Item Model - Poe Soul	Death Mountain Eruption Effects	
+375	0x0177		Item Model - Fairy's Spirit	Gate Barring Escape From Ganon's Tower	
+376	0x0178		Bombchu Bowling Alley Barriers	Soldier (Hyrule Castle Town & Kakariko Village)	
+377	0x0179		Inside Ganon's Castle Objects	Adult Zelda (Normal Gameplay)	
+378	0x017A		Death Mountain Cloud Rings	Ganon	
+379	0x017B		Item Model - Bullet Bags	Pierre (Lake Hylia)	
+380	0x017C		Ganondorf Animations I	Treasure Chest Shop Proprietor	
+381	0x017D		Ganondorf Animations II	Make Pushblock	
+382	0x017E		Ganondorf Animations III	Sun's Song Effect	
+383	0x017F		Item Model - Rupees	Ending Overlays	
+384	0x0180		Kakariko Village Objects (Adult)	Empty - (unused)	
+385	0x0181		Kakariko Village Objects (Child)	Grotto Treasure Chest	
+386	0x0182		Honey & Darling, Haggling Townspeople	Ending Cutscene NPCs	
+387	0x0183		Wolfos	Shot_Sun	
+388	0x0184		Stalchild	Great Fairy's Healing Beam	
+389	0x0185		Ganon's Lair Destructable Rubble	Checkable Spot	
+390	0x0186		Ganon's Lair Destructable Rubble Fragment	Patrolling Gerudo in Purple	
+391	0x0187		Shadow Temple Door & Shutter	Obj_Roomtimer	
+392	0x0188		Gossip Stone	Skulltula House Resident (Cursed)	
+393	0x0189		Poe Collector	Skulltula House Resident (Curse Lifted)	
+394	0x018A		Dodongo's Cavern Bombable Wall	Song of Time Effect	
+395	0x018B		Cow	Song of Storms Effect	
+396	0x018C		Fat Woman in Blue & Yellow Vest	Stinger (Water)	
+397	0x018D		Item Model - Kokiri Sword	Sacred Forest Meadow Pond Bottom	
+398	0x018E		Door Mimic	Spirit Temple Entrance Room Elevator	
+399	0x018F		Royal Family's Tomb Door	Iron Knuckle Debris	
+400	0x0190		Time Block	Gate to the Haunted Wasteland	
+401	0x0191		Child Zelda	Gate to the Gerudo Training Ground	
+402	0x0192			Deku Scrub (Inside the Deku Tree)	
+403	0x0193			Deku Scrub Projectile	
+404	0x0194			Broken Drawbridge	
+405	0x0195			Business Scrub (Attacking)	
+406	0x0196			Collectable Grave-Digging Game Items	
+407	0x0197			Gerudo Fighter	
+408	0x0198			Epona's Song Effect	
+409	0x0199			Saria's Song Effect	
+410	0x019A			Cucco-Chasing Girl	
+411	0x019B			Dog	
+412	0x019C			Gold Skulltula Token	
+413	0x019D			Kakariko Village Objects	
+414	0x019E			Beehive	
+415	0x019F			Bombable Wall (Desert Colossus)	
+416	0x01A0			Large Wooden Crate	
+417	0x01A1			Forest Stage Actor Spawner	
+418	0x01A2			Forest Stage Judge	
+419	0x01A3			Deku Scrub (Deku Target Game)	
+420	0x01A4			Happy Mask Shop Customer	
+421	0x01A5			Bombchu Bowling Alley Walls	
+422	0x01A6			Carpenter Boss's Son (Kakariko Village)	
+423	0x01A7			Ganon's Castle Barrier	
+424	0x01A8			Zora's Fountain Bombable Wall	
+425	0x01A9			Death Mountain Crater Bombable Wall	
+426	0x01AA			Empty - (unused)	
+427	0x01AB			Group of Rupees	
+428	0x01AC			Honey & Darling	
+429	0x01AD			Haggling Shoppers	
+430	0x01AE			Generic Goron & Biggoron	
+431	0x01AF			Wolfos	
+432	0x01B0			Stalchild	
+433	0x01B1			Ganon's Lair Rubble	
+434	0x01B2			Ganon's Lair Rubble Fragment	
+435	0x01B3			Fire Trial Sinking Zig-Zag Platform	
+436	0x01B4			Shadow Trial Invisible Path	
+437	0x01B5			Bg_Gnd_Soulmeiro	
+438	0x01B6			Ganon's Castle Fake Wall	
+439	0x01B7			Water Trial Ice Pushblock	
+440	0x01B8			Poe Collector	
+441	0x01B9			Gossip Stone	
+442	0x01BA			Water Temple Bombable Wall	
+443	0x01BB			Water Temple Gate	
+444	0x01BC			Kakariko Village - Carpenter	
+445	0x01BD			Bombchu Bowling Alley Walls	
+446	0x01BE			En_Wall_Tubo	
+447	0x01BF			Poe Guide	
+448	0x01C0			Guay	
+449	0x01C1			Door Mimic	
+450	0x01C2			Oasis Water	
+451	0x01C3			Spinning Goron Vase Lid	
+452	0x01C4			Door to Darunia's Room	
+453	0x01C5			Adult Malon (Day)	
+454	0x01C6			Cow	
+455	0x01C7			Icicle	
+456	0x01C8			Ice Cavern Bars	
+457	0x01C9			Pierre (Wandering)	
+458	0x01CA			Bonooru	
+459	0x01CB			Scarecrow's Song Effect	
+460	0x01CC			En_Eg	
+461	0x01CD			Gerudo Training Ground Fake Wall	
+462	0x01CE			Zora	
+463	0x01CF			Gold Skulltula Spawner	
+464	0x01D0			Nabooru's Second-in-Command	
+465	0x01D1			Time Block	
+466	0x01D2			Breakable Bronze Boulder	
+467	0x01D3			Child Zelda (Gameplay & Cutscene 04)	
+468	0x01D4			Running Man (Carpenters' Tent & Race)	
+469	0x01D5			Silver Gauntlets Pushblock [todo]	
+470	0x01D6			Time Block	

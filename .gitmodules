@@ -1,0 +1,24 @@
+[submodule "toolchain/novl"]
+	path = toolchain/novl
+	url = https://github.com/z64me/novl
+[submodule "include/z64hdr"]
+	path = include/z64hdr
+	url = https://github.com/turpaan64/z64hdr
+[submodule "toolchain/AudiobankToC"]
+	path = toolchain/AudiobankToC
+	url = https://github.com/sauraen/AudiobankToC.git
+[submodule "toolchain/z64audio"]
+	path = toolchain/z64audio
+	url = https://github.com/z64tools/z64audio.git
+[submodule "toolchain/z64convert"]
+	path = toolchain/z64convert
+	url = https://github.com/turpaan64/z64convert.git
+[submodule "toolchain/ZAPD"]
+	path = toolchain/ZAPD
+	url = https://github.com/zeldaret/ZAPD.git
+[submodule "toolchain/ci4tool"]
+	path = toolchain/ci4tool
+	url = https://github.com/sauraen/ci4tool.git
+[submodule "toolchain/ExtLib"]
+	path = toolchain/ExtLib
+	url = https://github.com/rankaisija64/ExtLib.git

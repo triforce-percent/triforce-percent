@@ -1,0 +1,3 @@
+0
+821 .byte 5
+84C .include room_actors.dat

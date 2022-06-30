@@ -1,0 +1,1 @@
+void Statics_MessageCodePatches();

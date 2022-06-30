@@ -1,0 +1,20 @@
+# Patching Master Sword actor to always treat Link as child
+# Base addr
+80918F20
+
+# Pretend always child:
+
+#render
+80918F74 addiu t6, zero, 1
+
+#action func 1 A
+80919058 addiu t3, zero, 1
+80919070 addiu t3, zero, 1
+80919080 addiu t3, zero, 1
+809190B0 addiu t3, zero, 1
+
+#action func 1 B
+809190E0 addiu t6, zero, 1
+
+#action func 2
+809191C4 addiu t6, zero, 1
