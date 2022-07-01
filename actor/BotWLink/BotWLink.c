@@ -169,7 +169,7 @@ static void BotWLink_TimeWarpCallback(BotWActor *botw, GlobalContext *globalCtx)
 	if(de->shrinkTimer >= 10 && de->shrinkTimer <= 30 && (globalCtx->gameplayFrames & 3)){
 		--de->shrinkTimer;
 	}
-	if(de->shrinkTimer >= 95) Actor_Kill(&tw_actor);
+	if(de->shrinkTimer >= 95) Actor_Kill(tw_actor);
 }
 
 static float sfxfreqscale = 1.0f;

@@ -106,7 +106,7 @@ static inline void BotWActor_Init(BotWActor *botw, GlobalContext *globalCtx,
 	botw->eyeTextureIndex = 0;
     botw->eyeState = 0;
 	botw->blinkTimer = 0;
-    botw->anim = &initAnim;
+    botw->anim = initAnim;
 	botw->anim_whendone = NULL;
 	botw->windX = 0.707f;
 	botw->windZ = -0.707f;

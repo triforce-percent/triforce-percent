@@ -28,7 +28,8 @@ OBJECTHDRS = \
 
 SCENEOUTLD = ../../scene/ChamberOfSages/ChamberOfSages_scene.out.ld
 
-default: copyactor copyobject
+default: copyactor
+#copyobject
 
 $(ACTORNAME).o: $(OBJECTHDRS)
 
@@ -36,5 +37,6 @@ $(ACTORNAME).elf: $(OBJECTNAME).out.ld $(SCENEOUTLD)
 
 ACTORLDFLAGS += -T $(OBJECTNAME).out.ld -T $(SCENEOUTLD)
 
-include ../../toolchain/make/object.mk
+#include ../../toolchain/make/object.mk
 include ../../toolchain/make/actor.mk
+

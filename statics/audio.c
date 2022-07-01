@@ -32,19 +32,19 @@
 #include "../voice/vo_zelda_hereitis.c"
 #include "../voice/vo_zelda_thankyou.c"
 #include "../voice/chimes.c"
-#include "../voice/botw_step_stone_l0.c"
-#include "../voice/botw_step_stone_l1.c"
-#include "../voice/botw_step_stone_r0.c"
-#include "../voice/botw_step_stone_r1.c"
-#include "../voice/botw_step_grassstraw_l0.c"
-#include "../voice/botw_step_grassstraw_l1.c"
-#include "../voice/botw_step_grassstraw_r0.c"
-#include "../voice/botw_step_grassstraw_r1.c"
-#include "../voice/botw_rustle_0.c"
-#include "../voice/botw_rustle_1.c"
-#include "../voice/botw_rustle_2.c"
+//#include "../voice/botw_step_stone_l0.c"
+//#include "../voice/botw_step_stone_l1.c"
+//#include "../voice/botw_step_stone_r0.c"
+//#include "../voice/botw_step_stone_r1.c"
+//#include "../voice/botw_step_grassstraw_l0.c"
+//#include "../voice/botw_step_grassstraw_l1.c"
+//#include "../voice/botw_step_grassstraw_r0.c"
+//#include "../voice/botw_step_grassstraw_r1.c"
+//#include "../voice/botw_rustle_0.c"
+//#include "../voice/botw_rustle_1.c"
+//#include "../voice/botw_rustle_2.c"
 
-#define NUM_CUST_SAMPLES 22
+#define NUM_CUST_SAMPLES 11
 SoundFontSample *cust_samples[NUM_CUST_SAMPLES] = {
     &vo_link_zerudahimeSample,
     &vo_link_isshoniSample,
@@ -57,21 +57,21 @@ SoundFontSample *cust_samples[NUM_CUST_SAMPLES] = {
     &vo_zelda_hereitisSample,
     &vo_zelda_thankyouSample,
     &chimesSample,
-    &botw_step_stone_l0Sample,
-    &botw_step_stone_l1Sample,
-    &botw_step_stone_r0Sample,
-    &botw_step_stone_r1Sample,
-    &botw_step_grassstraw_l0Sample,
-    &botw_step_grassstraw_l1Sample,
-    &botw_step_grassstraw_r0Sample,
-    &botw_step_grassstraw_r1Sample,
-    &botw_rustle_0Sample,
-    &botw_rustle_1Sample,
-    &botw_rustle_2Sample
+    //&botw_step_stone_l0Sample,
+    //&botw_step_stone_l1Sample,
+    //&botw_step_stone_r0Sample,
+    //&botw_step_stone_r1Sample,
+    //&botw_step_grassstraw_l0Sample,
+    //&botw_step_grassstraw_l1Sample,
+    //&botw_step_grassstraw_r0Sample,
+    //&botw_step_grassstraw_r1Sample,
+    //&botw_rustle_0Sample,
+    //&botw_rustle_1Sample,
+    //&botw_rustle_2Sample
 };
 float cust_sample_tuning[NUM_CUST_SAMPLES] = {
     1.0f, 1.0f, 1.0f, 1.0f, 1.0f, 1.0f, 1.0f, 1.0f, 1.0f, 1.0f, 1.6f,
-    1.0f, 1.0f, 1.0f, 1.0f, 1.0f, 1.0f, 1.0f, 1.0f, 1.0f, 1.0f, 1.0f
+    //1.0f, 1.0f, 1.0f, 1.0f, 1.0f, 1.0f, 1.0f, 1.0f, 1.0f, 1.0f, 1.0f
 };
 s32 sound_replace_offset[NUM_CUST_SAMPLES] = {
     0x1660 + 8*23, // EN_GANON_LAUGH
@@ -86,21 +86,21 @@ s32 sound_replace_offset[NUM_CUST_SAMPLES] = {
     0x1660 + 8*32, // EN_GANON_DEAD
     0x1660 + 8*33, // EN_GANON_BREATH
     //Step
-    0x1660 + 8*34, // EN_GANON_TOKETU
-    0x1660 + 8*35, // EN_GANON_CASBREAK
-    0x1660 + 8*36, // EN_GANON_BIGMASIC
-    0x1660 + 8*37, // EN_GANON_DARKWAVE
-    0x1660 + 8*14, // EN_IRONNACK_DAMAGE
-    0x1660 + 8*15, // EN_IRONNACK_DASH
-    0x1660 + 8*16, // EN_IRONNACK_DEAD
-    0x1660 + 8*17, // EN_IRONNACK_PULLOUT
-    0x1660 + 8*7 , // EN_TWINROBA_YOUNG_DAMAGE2
-    0x1660 + 8*8 , // EN_TWINROBA_YOUNG_SHOOTVC
-    0x1660 + 8*9   // EN_TWINROBA_YOUNG_LAUGH
+    //0x1660 + 8*34, // EN_GANON_TOKETU
+    //0x1660 + 8*35, // EN_GANON_CASBREAK
+    //0x1660 + 8*36, // EN_GANON_BIGMASIC
+    //0x1660 + 8*37, // EN_GANON_DARKWAVE
+    //0x1660 + 8*14, // EN_IRONNACK_DAMAGE
+    //0x1660 + 8*15, // EN_IRONNACK_DASH
+    //0x1660 + 8*16, // EN_IRONNACK_DEAD
+    //0x1660 + 8*17, // EN_IRONNACK_PULLOUT
+    //0x1660 + 8*7 , // EN_TWINROBA_YOUNG_DAMAGE2
+    //0x1660 + 8*8 , // EN_TWINROBA_YOUNG_SHOOTVC
+    //0x1660 + 8*9   // EN_TWINROBA_YOUNG_LAUGH
 };
 u8 cust_sample_bank_idx[NUM_CUST_SAMPLES] = {
     1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
-    1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1
+    //1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1
 };
 s32 bank_ram_addr[2] = {
     0x80192A10, // Master Bank

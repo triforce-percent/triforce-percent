@@ -11,18 +11,18 @@ SOUNDS = \
 	vo_zelda_youasked.c \
 	vo_zelda_hereitis.c \
 	vo_zelda_thankyou.c \
-	chimes.c \
-	botw_step_stone_l0.c \
-	botw_step_stone_l1.c \
-	botw_step_stone_r0.c \
-	botw_step_stone_r1.c \
-	botw_step_grassstraw_l0.c \
-	botw_step_grassstraw_l1.c \
-	botw_step_grassstraw_r0.c \
-	botw_step_grassstraw_r1.c \
-	botw_rustle_0.c \
-	botw_rustle_1.c \
-	botw_rustle_2.c
+	chimes.c #\
+	#botw_step_stone_l0.c \
+	#botw_step_stone_l1.c \
+	#botw_step_stone_r0.c \
+	#botw_step_stone_r1.c \
+	#botw_step_grassstraw_l0.c \
+	#botw_step_grassstraw_l1.c \
+	#botw_step_grassstraw_r0.c \
+	#botw_step_grassstraw_r1.c \
+	#botw_rustle_0.c \
+	#botw_rustle_1.c \
+	#botw_rustle_2.c
 
 Z64AUDIO = $(PROJECT_DIR)/toolchain/z64audio/z64audio
 
@@ -47,17 +47,18 @@ default: $(SOUNDS)
 	$(call procvoice,26,8,vo_zelda_hereitis)
 	$(call procvoice,27,9,vo_zelda_thankyou)
 	$(call procvoice,28,10,chimes)
-	$(call procvoice,29,11,botw_step_stone_l0)
-	$(call procvoice,30,12,botw_step_stone_l1)
-	$(call procvoice,31,13,botw_step_stone_r0)
-	$(call procvoice,32,14,botw_step_stone_r1)
-	$(call procvoice,33,15,botw_step_grassstraw_l0)
-	$(call procvoice,34,16,botw_step_grassstraw_l1)
-	$(call procvoice,35,17,botw_step_grassstraw_r0)
-	$(call procvoice,36,18,botw_step_grassstraw_r1)
-	$(call procvoice,37,19,botw_rustle_0)
-	$(call procvoice,38,20,botw_rustle_1)
-	$(call procvoice,39,21,botw_rustle_2)
+
+#$(call procvoice,29,11,botw_step_stone_l0)
+#$(call procvoice,30,12,botw_step_stone_l1)
+#$(call procvoice,31,13,botw_step_stone_r0)
+#$(call procvoice,32,14,botw_step_stone_r1)
+#$(call procvoice,33,15,botw_step_grassstraw_l0)
+#$(call procvoice,34,16,botw_step_grassstraw_l1)
+#$(call procvoice,35,17,botw_step_grassstraw_r0)
+#$(call procvoice,36,18,botw_step_grassstraw_r1)
+#$(call procvoice,37,19,botw_rustle_0)
+#$(call procvoice,38,20,botw_rustle_1)
+#$(call procvoice,39,21,botw_rustle_2)
 
 botw_%.c: botw_%.wav
 	$(Z64AUDIO) -i $< -o $@

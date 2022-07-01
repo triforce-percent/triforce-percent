@@ -1,5 +1,5 @@
 statics_START = 0x804039a0;
-sIsLiveRun = 0x80410080;
+sIsLiveRun = 0x8040f7b0;
 Statics_Init = 0x804039a0;
 Statics_Update = 0x80404468;
 Statics_RegisterStaticData = 0x804044ec;
@@ -28,4 +28,4 @@ HairPhys_SetDebug = 0x80407ebc;
 HairPhys_Init = 0x80409408;
 HairPhys_Update = 0x80409438;
 HairPhys_UpdateCulled = 0x80409468;
-statics_END = 0x80411730;
+statics_END = 0x80410e60;
