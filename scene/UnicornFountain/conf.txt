@@ -1,0 +1,5 @@
+unk_a 0
+unk_b 0
+shader 33
+save 38
+restrict 0

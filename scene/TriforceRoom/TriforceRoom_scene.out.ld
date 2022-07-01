@@ -1,0 +1,1 @@
+TriforceRoom_scene_header00_cutscene = 0x20002ec;
