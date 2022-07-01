@@ -1,0 +1,79 @@
+# base addr
+808301C0
+# reloc table header (count) offset
+!00023130
+
+# Patch func_808519EC / func_8084F868 (1.0) / Link_Action_MasterSword_Init to always use child link anim
+8084F898 lui a2, 0x0400
+8084F8A8 addiu a2, a2, 0x2360
+
+# Patch func_80851A50 / func_8084F8CC (1.0) / Link_Action_MasterSword_Update to use child data for most things
+# anim frame to grab sword
+8084F8F4 addiu v1, zero, 1
+8084F918 addiu v1, zero, 1
+# dlist selection--change left hand to holding regular sword (MS)
+8084F96C addiu v0, v0, 0x7908
+# sfx
+8084F97C addiu a1, zero, 0x1836
+8084F994 addiu t2, zero, 1
+8084F9AC addiu a1, zero, 0x6801
+8084F9B8 addiu t3, zero, 1
+
+# Patch func_8083E5A8 / func_8083C678 (1.0) / Link_PressAOnInteractedActor_OrSomething to always child, don't take out weapon when pulling Master Sword
+8083CA00 addiu t1, zero, 1
+
+# Patch func_808473D4 / func_808454D8 (1.0) / Link_GetDoActionForInteractedActor to always child when in front of Master Sword ("Grab" on A)
+80845678 addiu t5, zero, 1
+
+# Patch Player_ItemToActionParam / func_80831758 (1.0) to do Din's Fire action when using Fire Medallion on C, replacing Fishing Pole
+80831774 addiu at, zero, 0x67
+80831780 addiu at, zero, 0x67
+80831790 addiu v0, zero, 0x1A
+
+# Patch Player_Init to jump to Statics_Player_Init
+# Need to save t8 and reconstruct v1 = -1
+80844E28 jal Statics_Player_Init
+80844E2C sw    t8, 0x000C(sp)
+80844E30 lw    t8, 0x000C(sp)
+80844E34 addiu v1, zero, 0xFFFF
+80844E38 nop
+
+# Patch Player_UpdateCommon to jump to Statics_Player_Update
+80847114 jal Statics_Player_Update
+80847118 nop
+8084711C addiu a1, s0, 0x0000
+80847120 nop
+80847124 nop
+
+# Patch action loading functions to use patched action tables
+# These are changing from relocatable addresses to non-relocatable
+!80847B00 lui   t9,     %hi(csActionToLinkActionPatchTable)
+!80847B0C lb    t9,     %lo(csActionToLinkActionPatchTable)(t9)
+!80850BA4 lui   v0,     %hi(csActionToLinkActionPatchTable)
+!80850BB4 lb    v0,     %lo(csActionToLinkActionPatchTable)(v0)
+!80850C8C lui   v0,     %hi(csActionToLinkActionPatchTable)
+!80850C94 lb    v0,     %lo(csActionToLinkActionPatchTable)(v0)
+!80850C60 lui   t5,     %hi(linkActionInitPatchTable)
+!80850C64 addiu t5, t5, %lo(linkActionInitPatchTable)
+!80850D2C lui   t0,     %hi(linkActionInitPatchTable)
+!80850D30 addiu t0, t0, %lo(linkActionInitPatchTable)
+!80850CB4 lui   t9,     %hi(linkActionRunPatchTable)
+!80850CB8 addiu t9, t9, %lo(linkActionRunPatchTable)
+!80850D50 lui   t2,     %hi(linkActionRunPatchTable)
+!80850D54 addiu t2, t2, %lo(linkActionRunPatchTable)
+
+# Patch run speed
+8083C028 j Statics_Player_PatchedRunning
+
+# Patch jump height
+80847C4C jal Statics_Player_BunnyHood_YSpeed
+80847C64 nop
+
+# Patch spawning effect for warp song
+8084C618 sb    t8, 0x1397(v1)
+8084C61C jal Statics_ShouldAbortWarp
+8084C620 nop
+8084C624 bne   v0, zero, 8084C6C0
+8084C628 nop
+8084C630 addiu a1, zero, 0x0000
+8084C638 addiu a0, s1, 0x0000

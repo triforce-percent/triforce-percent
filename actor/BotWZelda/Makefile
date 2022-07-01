@@ -48,7 +48,8 @@ TEXTURES = \
 	eye1.inc \
 	eye2.inc
 
-default: copyactor copyobject
+default: copyactor
+#copyobject
 
 $(ACTORNAME).o: $(OBJECTHDRS) $(SHDRS)
 
@@ -58,7 +59,7 @@ BotWZeldaMeshTex.o: $(TEXTURES)
 
 ACTORLDFLAGS += $(addprefix -T , $(LDFILES))
 
-include ../../toolchain/make/object.mk
+#include ../../toolchain/make/object.mk
 include ../../toolchain/make/actor.mk
 
 %.inc: tex-lores/%.png
