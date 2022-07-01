@@ -12,6 +12,9 @@ But, in front of thousands of live viewers, once we have the power of the
 Goddesses--and the power to make the game whatever we can imagine--what will we
 use this power for?
 
+**This repository does not include any ROMs or any code or assets copyrighted
+by Nintendo. Only content created by the Triforce% team is included.**
+
 
 # Setup
 

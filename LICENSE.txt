@@ -1,0 +1,20 @@
+Triforce% OoT ACE Showcase
+Copyright (C) 2019-2022
+The Triforce% Team
+
+This repository does not include any ROMs or any code or assets copyrighted
+by Nintendo. Only content created by the Triforce% team is included.
+
+
+You may run, copy, redistribute, modify, create and distribute derivative works of, and otherwise deal in ("use") the code, tools, and assets ("content") in this repository, subject to the following conditions:
+
+1. Credits - You must credit whoever produced the content you are using, i.e. the members of the Triforce% team who contributed to that content. If it is not clear which members created which part, contact the developers.
+ - If you are distributing the content in source form, you must include the contributor names in a prominent location in the source distribution, and in a similar way to how you credit yourself and other collaborators.
+ - If you use the content directly in a romhack or similar project, you must include the contributor names in your project's in-game Staff Roll.
+ - If the content you use is tools, and you use them without modification and do not redistribute them, you don't have to credit anyone.
+
+2. No Endorsement - You must not make any implication that the Triforce% team or developers endorse or support any works you create using content from the Triforce% repo.
+
+3. No Warranty - You must agree that no warranty, express or implied, is provided for the content, as far as is permitted by law.
+
+
