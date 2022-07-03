@@ -1,6 +1,6 @@
 # Triforce%
 
-Triforce% is a hybrid RTA/TAS "speedrun" of Ocarina of Time which uses Arbitrary
+[Triforce%](https://gettriforce.link) is a hybrid RTA/TAS "speedrun" of Ocarina of Time which uses Arbitrary
 Code Execution (ACE) to install a set of data loaders in system memory, enabling
 arbitrary assets (scenes, objects, music, etc.) in the game ROM to be seamlessly
 live-patched from the host PC. By modifying the game programming and assets,
@@ -15,6 +15,7 @@ use this power for?
 **This repository does not include any ROMs or any code or assets copyrighted
 by Nintendo. Only content created by the Triforce% team is included.**
 
+Watch the live run: https://www.youtube.com/watch?v=2x_pqyrf9lA
 
 # Setup
 
