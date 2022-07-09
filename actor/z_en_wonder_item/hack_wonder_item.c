@@ -1,3 +1,4 @@
+#define NO_Z64HDR_GARBAGE 1
 #include "ootmain.h"
 
 #define QUOTEX(x) #x

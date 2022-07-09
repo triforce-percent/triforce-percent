@@ -18,3 +18,5 @@ __pycache__/
 toolchain/yaz0/yaz0_encode
 music/02-*.wav
 music/02-*.wav.reapeaks
+
+.python-version

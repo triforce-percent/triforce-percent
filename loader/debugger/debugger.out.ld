@@ -1,7 +1,7 @@
-debugger_START = 0x804020d0;
-Debugger_GetNextMessageBuffer = 0x80402314;
-Debugger_ShowMessage = 0x80402354;
-sPerfCount = 0x80402730;
-sDbgLagRepeat = 0x80402734;
-sDbgLagPlaySpeed = 0x80402738;
-debugger_END = 0x80402ac0;
+debugger_START = 0x804020e0;
+Debugger_GetNextMessageBuffer = 0x804022f0;
+Debugger_ShowMessage = 0x80402330;
+sPerfCount = 0x80402710;
+sDbgLagRepeat = 0x80402714;
+sDbgLagPlaySpeed = 0x80402718;
+debugger_END = 0x80402aa0;
