@@ -331,8 +331,8 @@ static void BgSpot07Taki_Update(Actor* thisx, GlobalContext* globalCtx) {
 	if(g.thawingState >= THAWING_STATE_THAWING){
 		globalCtx->envCtx.unk_EE[3] = 0; //target number of snowflakes
 		//current number of snowflakes
-		if(globalCtx->envCtx.unk_EE[2] > 0 && (globalCtx->state.frames % 2) == 0){
-			--globalCtx->envCtx.unk_EE[2];
+		if(globalCtx->envCtx.unk_EE[2] > 0 && (globalCtx->state.frames % 4) == 0){
+			globalCtx->envCtx.unk_EE[2] -= 2;
 		}
 	}
 }
