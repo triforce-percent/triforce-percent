@@ -50,7 +50,7 @@ This was tried on a mostly fresh native install of Ubuntu 20.04, and on Ubuntu
 installation instructions on the glank N64 toolchain github page, so you should
 be following those instructions but also looking at this info at the same time.
 
-- Install `libgmp-dev`.
+- Install `libgmp-dev` and `texinfo`.
 - `git clone` the repo instead of downloading the zip file (because of the next
 step).
 - When it says "navigate to `n64-master`", this means `git checkout n64-ultra`.
@@ -60,8 +60,12 @@ sudo mkdir /opt/n64
 sudo chown yourusername /opt/n64
 sudo chgrp yourusername /opt/n64
 ```
-- `make -j4` or whatever works OK without issues.
-- I don't think the `make install-local-exec` step is needed.
+- If `make install-toolchain` with `-j4` or whatever fails early (without fully
+building and installing the compiler), delete and re-clone the repo (and
+checkout n64-ultra again), and then re-run it without a `-j` argument.
+- For Triforce%, you don't need the `make`, `make install`, `make install-sys`,
+or `make install-local-exec` steps. `make install-toolchain` builds and installs
+the compiler/linker/etc., which is all we need.
 - If you don't already know, one way to add `/opt/n64/bin` to PATH is to add the
 line
 ```
@@ -225,4 +229,3 @@ The Triforce% Team
 The Legend of ZELDA: Ocarina of Time \
 Copyright (C) 1998 \
 Nintendo
-
