@@ -15,8 +15,10 @@ TriforceLight/ \
 TwitchMessages/ \
 WSRCutscene/ \
 z_bg_mjin/ \
+z_bg_spot07_taki/ \
 z_bg_toki_swd/ \
 z_demo_effect/ \
+z_en_ge1/ \
 z_en_ge2/ \
 z_en_girla/ \
 z_en_mm3/ \
@@ -27,9 +29,6 @@ z_en_xc/ \
 z_kaleido_scope/ \
 z_oceff_wipe/ \
 z_player/
-
-#z_bg_spot07_taki/ \
-#z_en_ge1/
 
 .PHONY: default clean $(SUBDIRS)
 

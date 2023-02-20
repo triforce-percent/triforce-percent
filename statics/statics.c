@@ -258,13 +258,13 @@ void Statics_TestShortcuts(){
             globalCtx->linkAgeOnLoad = 0;
             globalCtx->nextEntranceIndex = 0x0185;
         }else if((CTRLR_PRESS & BTN_CUP)){
-            //Warp to Hyrule Field from Lon Lon Ranch with Sages' Charm
+            //Warp to Zora's Domain from Zora's River with Sages' Charm
             WORKING_BUNNYHOOD_VAR |= WORKING_BUNNYHOOD_BIT;
             WORKING_GERUDOMASK_VAR |= WORKING_GERUDOMASK_BIT;
             Statics_GiveLongOfTime();
             SAGES_CHARM_VAR |= SAGES_CHARM_BIT;
             globalCtx->linkAgeOnLoad = 0;
-            globalCtx->nextEntranceIndex = 0x01F9;
+            globalCtx->nextEntranceIndex = 0x0108;
         }else if((CTRLR_PRESS & BTN_CLEFT)){
             //Warp to Temple of Time from warp pad with Overture of Sages
             Statics_GiveOvertureOfSages();

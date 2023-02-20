@@ -8,7 +8,6 @@
 
 #include "ootmain.h"
 #include "z_bg_spot07_taki.h"
-#include "particles.h"
 
 /* original functions */
 static void BgSpot07Taki_Init(Actor* thisx, GlobalContext* globalCtx);
@@ -313,13 +312,24 @@ static void BgSpot07Taki_Update(Actor* thisx, GlobalContext* globalCtx) {
 		
 		if (!(ok & 3))
 		{
-			Vec3f pos = PLAYER->actor.world.pos;
-			sDustPrimColor.g = sDustPrimColor.b = (1.0 - wow) * (250 / 2);
-			sDustPrimColor.g += 127;
-			sDustPrimColor.b *= 2;
-			sDustEnvColor.g = sDustPrimColor.g / 2;
-			sDustEnvColor.b = sDustPrimColor.b / 2;
-			func_80890B8C(&pos, globalCtx, wow * 0.5f, 2.0);
+			for(s32 i=0; i<5; ++i){
+				if(wow < Rand_ZeroOne()) continue;
+				Vec3f pos = PLAYER->actor.world.pos;
+				pos.x += Rand_CenteredFloat(180.0f) + Rand_CenteredFloat(80.0f);
+				pos.y += Rand_ZeroFloat(40.0f) - 10.0f;
+				pos.z += Rand_CenteredFloat(180.0f) + Rand_CenteredFloat(80.0f);
+				Vec3f vel = {0.0f, 0.0f, 0.0f};
+				Vec3f accel = {0.0f, 0.9f, 0.0f};
+				Color_RGBA8 prim = { 255, 0, 0, 255 };
+				Color_RGBA8 env = { 160, 0, 0, 255 };
+				prim.g = prim.b = (1.0 - wow) * (250 / 2);
+				prim.g += 127;
+				prim.b *= 2;
+				env.g = prim.g / 2;
+				env.b = prim.b / 2;
+				func_8002829C(globalCtx, &pos, &vel, &accel, &prim, &env,
+					600.0f, 120.0f);
+			}
 			wow -= 0.1f;
 			if (wow <= 0)
 				ok = -1;

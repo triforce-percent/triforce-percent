@@ -1,0 +1,10 @@
+extern AnimationHeader gGerudoWhiteIdleAnim;
+extern AnimationHeader gGerudoWhiteClapAnim;
+extern AnimationHeader gGerudoWhiteDismissiveAnim;
+extern FlexSkeletonHeader gGerudoWhiteSkel;
+extern Gfx gGerudoWhiteHairstyleSpikyDL;
+extern u64 gGerudoWhiteEyeOpenTex[];
+extern u64 gGerudoWhiteEyeHalfTex;
+extern u64 gGerudoWhiteEyeClosedTex[];
+#define GE1_LIMB_HEAD 15
+#define GE1_LIMB_MAX 16
