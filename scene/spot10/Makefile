@@ -13,3 +13,6 @@ include ../../toolchain/make/sceneroom.mk
 
 room7_patch.txt:
 	cp $(BETAKOKIRIREPLACEMENT) $@
+
+clean:
+	rm -f room7_patch.txt

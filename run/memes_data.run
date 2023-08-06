@@ -7,9 +7,6 @@ ACTOR 333 ../actor/z_en_owl/z_en_owl.zovl
 //Misc scene patches
 PATCH 0x217C000 ../scene/spot10/room_7.pat
 
-//Custom text
-STATICDATA ../text/messages.bin 6 0 0
-
 //ACTOR 123 ../actor/PatrickStar/PatrickStar.zovl
 //OBJECT 127 ../actor/PatrickStar/zobj.zobj
 
@@ -19,4 +16,4 @@ STATICDATA ../text/messages.bin 6 0 0
 ACTOR 127 ../actor/Amogus/Amogus.zovl
 OBJECT 132 ../actor/Amogus/zobj.zobj
 
-STATICDATA ../music/ocarina_meme.aseq 1 0x71020201 0x0E000000
+STATICDATA ../music/ocamungus.aseq 1 0x71020201 0x0E000000

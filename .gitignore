@@ -20,3 +20,16 @@ music/02-*.wav
 music/02-*.wav.reapeaks
 
 .python-version
+
+actor/*/*.zovl
+scene/*/*.zmap
+scene/*/*.zscene
+run/bootstrap*.txt
+run/bootstrap*.m64
+textures/*.inc
+
+voice/*.book.bin
+voice/*.loopbook.bin
+voice/*.vadpcm.bin
+voice/vo_*.c
+voice/chimes.c

@@ -9,8 +9,8 @@ PATCH 0xE9F0D0 ../actor/z_en_ge2/actor.pat
 PATCH 0xC004E0 ../actor/z_en_girla/actor.pat
 
 //Misc scene patches
-PATCH 0x217C000 ../scene/spot10/spot10_room_7.pat
-PATCH 0x2171000 ../scene/spot10/spot10_room_5.pat
+PATCH 0x217C000 ../scene/spot10/room_7.pat
+PATCH 0x2171000 ../scene/spot10/room_5.pat
 PATCH 0x28E4000 ../scene/shop1/shop1_room_0.pat
 PATCH 0x32B1000 ../scene/gerudoway/gerudoway_room_3.pat
 PATCH 0x2186000 ../scene/spot11/scene.pat

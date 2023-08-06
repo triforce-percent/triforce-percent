@@ -12,7 +12,7 @@ OBJECTHDRS = \
 	AmogusObj.h \
 	AmogusObjIdleAnim.h
 LDFILES = \
-	$(OBJECTNAME).out.ld \
+	$(OBJECTNAME).out.ld
 
 CCFLAGS += -Wno-missing-braces
 
@@ -26,3 +26,8 @@ ACTORLDFLAGS += $(addprefix -T , $(LDFILES))
 
 include ../../toolchain/make/object.mk
 include ../../toolchain/make/actor.mk
+
+clean: clean2
+
+clean2:
+	rm -f zobj.zobj
