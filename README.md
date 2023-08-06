@@ -17,6 +17,15 @@ by Nintendo. Only content created by the Triforce% team is included.**
 
 Watch the live run: https://www.youtube.com/watch?v=2x_pqyrf9lA
 
+### MAGFest 2023 Content
+
+To obtain the version [created live on stage at MAGFest 2023's OoT ACE Meme% panel](https://www.youtube.com/watch?v=UVp3RK_YFb8),
+set the environment variable `export MEMES=1` before running `make`. (Or if you
+have already run `make`, run `make clean` and then `make` again.) Both the live
+injection and romhack versions are supported. This replaces the beta Kokiri with
+a red Amogus, and adds [Goron City (Unused Version)](https://www.youtube.com/watch?v=S22VKK0Sb0M)
+by SiIvaGunner (Among Us Trap Remix) which plays when you talk to it.
+
 # Setup
 
 - Install Linux (Ubuntu / other Debian derivative), either natively or through
