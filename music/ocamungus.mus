@@ -1,0 +1,921 @@
+; Nintendo 64 Music Macro Language (Audioseq) (.mus) sequence: ocamungus
+; Converted by SEQ64 V2.3.0 [https://github.com/sauraen/seq64]
+
+; Sequence Header
+
+_start:
+    mutebhv 32
+    mutescale 50
+    initchan 0x001F
+start:
+    startchan 0, start_chn0
+    startchan 1, start_chn1
+    startchan 2, start_chn2
+    startchan 3, start_chn3
+    startchan 4, start_chn4
+    svol 88
+    tempo 115
+    delay 1560
+tsec1:
+    startchan 0, tsec1_chn0
+    startchan 1, tsec1_chn1
+    startchan 2, tsec1_chn2
+    startchan 3, tsec1_chn3
+    startchan 4, tsec1_chn4
+    delay 6144
+    jump tsec1
+    disablechan 0x001F
+    end
+; Section total ticks: 7704
+
+; Channel Headers
+
+; tsec0
+
+start_chn0:
+    shortoff
+    startlayer 0, start_chn0_ly0
+    cpan 32
+    cvol 100
+    pitchbend 0
+    reverb 64
+    instr 0
+    delay 1560
+    end
+; Section total ticks: 1560
+
+start_chn1:
+    shortoff
+    startlayer 0, start_chn1_ly0
+    cpan 118
+    cvol 100
+    pitchbend 0
+    reverb 5
+    instr 1
+    delay 1560
+    end
+; Section total ticks: 1560
+
+start_chn2:
+    shortoff
+    startlayer 0, start_chn2_ly0
+    startlayer 1, start_chn2_ly1
+    cpan 54
+    cvol 100
+    pitchbend 0
+    reverb 10
+    instr 2
+    delay 1560
+    end
+; Section total ticks: 1560
+
+start_chn3:
+    shortoff
+    cpan 10
+    cvol 100
+    pitchbend 0
+    reverb 64
+    instr 3
+    delay 1560
+    end
+; Section total ticks: 1560
+
+start_chn4:
+    shortoff
+    cpan 74
+    cvol 100
+    pitchbend 0
+    reverb 64
+    instr 4
+    delay 1560
+    end
+; Section total ticks: 1560
+
+; tsec1
+
+tsec1_chn0:
+    startlayer 0, tsec1_chn0_ly0
+    delay 6144
+    end
+; Section total ticks: 6144
+
+tsec1_chn1:
+    startlayer 0, tsec1_chn1_ly0
+    delay 6144
+    end
+; Section total ticks: 6144
+
+tsec1_chn2:
+    startlayer 0, tsec1_chn2_ly0
+    startlayer 1, tsec1_chn2_ly1
+    delay 6144
+    end
+; Section total ticks: 6144
+
+tsec1_chn3:
+    startlayer 0, tsec1_chn3_ly0
+    startlayer 1, tsec1_chn3_ly1
+    reverb 64
+    cpan 10
+    instr 3
+    delay 6144
+    end
+; Section total ticks: 6144
+
+tsec1_chn4:
+    startlayer 0, tsec1_chn4_ly0
+    startlayer 1, tsec1_chn4_ly1
+    startlayer 2, tsec1_chn4_ly2
+    delay 792
+    reverb 64
+    cpan 74
+    instr 4
+    delay 5352
+    end
+; Section total ticks: 6144
+
+; Note Layers
+
+; tsec0
+
+start_chn0_ly0:
+    ltp 0
+    ldelay 24
+    call _chn0_ly0_call2
+    loop 2
+    notedv 39, 72, 122
+    notedvg 38, 120, 92, 51
+    loopend
+    call _chn0_ly0_call7
+    notedvg 38, 120, 84, 51
+    notedv 39, 72, 109
+    call _chn0_ly0_call10
+    notedvg 38, 120, 65, 51
+    call _chn0_ly0_call2
+    end
+; Section total ticks: 1368
+
+start_chn1_ly0:
+    ltp 0
+    ldelay 72
+    notedvg 28, 72, 89, 39
+    notedvg 28, 24, 104, 64
+    notevg 27, 82, 74
+    call _chn1_ly0_call5
+    notedvg 28, 24, 108, 21
+    notevg 27, 116, 96
+    notedvg 27, 72, 106, 184
+    notevg 28, 113, 28
+    notedvg 28, 24, 92, 53
+    notevg 27, 87, 74
+    call _chn1_ly0_call12
+    notedvg 28, 24, 95, 32
+    notevg 27, 117, 64
+    notedvg 27, 72, 91, 184
+    notevg 28, 121, 39
+    notedvg 28, 24, 84, 64
+    call _chn1_ly0_call18
+    notedvg 28, 72, 81, 3
+    notedvg 28, 24, 83, 21
+    notevg 27, 97, 96
+    notedvg 27, 72, 99, 184
+    notevg 28, 98, 28
+    notedvg 28, 24, 85, 53
+    notevg 27, 115, 74
+    notedvg 27, 72, 121, 177
+    notevg 28, 86, 3
+    notedvg 28, 24, 82, 32
+    notevg 27, 69, 64
+    notevg 27, 88, 42
+    end
+; Section total ticks: 1560
+
+start_chn2_ly0:
+    ltp 0
+    ldelay 792
+    loop 2
+    notedvg 14, 96, 84, 189
+    notedvg 14, 24, 88, 53
+    notedvg 14, 120, 90, 209
+    notedvg 14, 48, 65, 149
+    notedvg 14, 24, 76, 74
+    notedvg 14, 72, 88, 195
+    loopend
+    end
+; Section total ticks: 1176
+
+start_chn2_ly1:
+    ltp 0
+    ldelay 816
+    call _chn2_ly1_call2
+    notedvg 16, 144, 85, 220
+    call _chn2_ly1_call2
+    notedvg 16, 120, 85, 213
+    end
+; Section total ticks: 1560
+
+; tsec1
+
+tsec1_chn0_ly0:
+    ltp 0
+    call _chn0_ly0_call7
+    call _chn0_ly0_call10
+    notedvg 38, 120, 85, 51
+    notedv 39, 72, 122
+    notedvg 38, 120, 77, 51
+    notedv 39, 72, 122
+    notedvg 38, 120, 67, 51
+    call _chn0_ly0_call2
+    notedv 39, 72, 110
+    notedvg 38, 120, 61, 51
+    call _chn0_ly0_call2
+    notedv 39, 72, 123
+    call _chn0_ly0_call10
+    notedvg 38, 120, 67, 51
+    notedv 39, 72, 101
+    notedvg 38, 120, 96, 51
+    notedv 39, 72, 117
+    notedvg 38, 120, 66, 51
+    call _chn0_ly0_call2
+    loop 2
+    notedv 39, 72, 122
+    notedvg 38, 120, 92, 51
+    loopend
+    call _chn0_ly0_call7
+    notedvg 38, 120, 84, 51
+    notedv 39, 72, 109
+    call _chn0_ly0_call10
+    notedvg 38, 120, 65, 51
+    call _chn0_ly0_call2
+    call _chn0_ly0_call7
+    call _chn0_ly0_call10
+    notedvg 38, 120, 85, 51
+    notedv 39, 72, 122
+    notedvg 38, 1656, 77, 241
+    end
+; Section total ticks: 5952
+
+tsec1_chn1_ly0:
+    ltp 0
+    ldelay 48
+    notedvg 28, 72, 89, 39
+    notedvg 28, 24, 98, 64
+    notevg 27, 66, 74
+    notedvg 27, 72, 89, 181
+    notevg 28, 112, 3
+    notedvg 28, 24, 127, 21
+    notevg 27, 111, 96
+    notedvg 27, 72, 69, 184
+    notevg 28, 68, 28
+    notedvg 28, 24, 95, 53
+    notevg 27, 116, 74
+    call _chn1_ly0_call12
+    notedvg 28, 24, 113, 32
+    notevg 27, 75, 64
+    notedvg 27, 72, 102, 184
+    notevg 28, 79, 39
+    notedvg 28, 24, 109, 64
+    notevg 27, 89, 74
+    call _chn1_ly0_call5
+    notedvg 28, 24, 98, 21
+    notevg 27, 121, 96
+    notedvg 27, 72, 84, 184
+    call _chn1_ly0_call24
+    notedvg 27, 24, 83, 74
+    notedvg 27, 72, 77, 177
+    notevg 28, 112, 3
+    notedvg 28, 24, 69, 32
+    notevg 27, 74, 64
+    notedvg 27, 72, 78, 184
+    call _chn1_ly0_call31
+    call _chn1_ly0_call18
+    call _chn1_ly0_call33
+    call _chn1_ly0_call24
+    call _chn1_ly0_call35
+    notedvg 27, 72, 126, 184
+    notevg 28, 89, 39
+    notedvg 28, 24, 104, 64
+    notevg 27, 82, 74
+    call _chn1_ly0_call5
+    notedvg 28, 24, 108, 21
+    notevg 27, 116, 96
+    notedvg 27, 72, 106, 184
+    notevg 28, 113, 28
+    notedvg 28, 24, 92, 53
+    notevg 27, 87, 74
+    call _chn1_ly0_call12
+    notedvg 28, 24, 95, 32
+    notevg 27, 117, 64
+    notedvg 27, 72, 91, 184
+    notevg 28, 121, 39
+    notedvg 28, 24, 84, 64
+    call _chn1_ly0_call18
+    notedvg 28, 72, 81, 3
+    notedvg 28, 24, 83, 21
+    notevg 27, 97, 96
+    notedvg 27, 72, 99, 184
+    notevg 28, 98, 28
+    notedvg 28, 24, 85, 53
+    notevg 27, 115, 74
+    notedvg 27, 72, 121, 177
+    notevg 28, 86, 3
+    notedvg 28, 24, 82, 32
+    notevg 27, 69, 64
+    notedvg 27, 72, 88, 184
+    notevg 28, 89, 39
+    notedvg 28, 24, 98, 64
+    notevg 27, 66, 74
+    notedvg 27, 72, 89, 181
+    notevg 28, 112, 3
+    notedvg 28, 24, 127, 21
+    notevg 27, 111, 96
+    notedvg 27, 72, 69, 184
+    notevg 28, 68, 28
+    notedvg 28, 24, 95, 53
+    notevg 27, 116, 74
+    call _chn1_ly0_call12
+    notedvg 28, 24, 113, 32
+    notevg 27, 75, 64
+    notedvg 27, 72, 102, 184
+    call _chn1_ly0_call31
+    call _chn1_ly0_call18
+    call _chn1_ly0_call33
+    call _chn1_ly0_call24
+    call _chn1_ly0_call35
+    notedvg 27, 72, 126, 184
+    call _chn1_ly0_call31
+    call _chn1_ly0_call18
+    call _chn1_ly0_call33
+    call _chn1_ly0_call24
+    call _chn1_ly0_call35
+    notedv 27, 24, 126
+    end
+; Section total ticks: 6144
+
+tsec1_chn2_ly0:
+    ltp 0
+    ldelay 24
+    notedv 14, 24, 76
+    notevg 16, 85, 117
+    notevg 16, 85, 96
+    notevg 16, 87, 0
+    notedvg 14, 72, 90, 195
+    notedvg 14, 24, 82, 10
+    notedvg 16, 48, 89, 160
+    notedvg 16, 24, 89, 128
+    notedvg 16, 120, 87, 202
+    notedvg 16, 48, 81, 144
+    notedvg 16, 144, 85, 224
+    notedvg 16, 48, 91, 149
+    notedvg 16, 24, 87, 106
+    notevg 16, 89, 0
+    ldelay 1632
+    loop 3
+    notedvg 16, 48, 83, 133
+    notedvg 16, 336, 87, 240
+    loopend
+    notedvg 16, 48, 83, 133
+    notedv 16, 21, 87
+    ldelay 1851
+    call _chn2_ly1_call2
+    notedvg 16, 144, 85, 220
+    call _chn2_ly1_call2
+    notedvg 16, 120, 85, 213
+    end
+; Section total ticks: 5376
+
+tsec1_chn2_ly1:
+    ltp 0
+    ldelay 312
+    notedvg 14, 120, 90, 215
+    notedvg 14, 48, 76, 154
+    notedvg 14, 24, 76, 64
+    notedvg 14, 72, 86, 181
+    notedvg 14, 120, 82, 206
+    notedv 14, 19, 86
+    ldelay 1637
+    loop 3
+    notedvg 14, 48, 84, 144
+    notedvg 14, 336, 90, 235
+    loopend
+    notedvg 14, 48, 84, 144
+    notedv 14, 27, 90
+    ldelay 1797
+    loop 2
+    notedvg 14, 96, 84, 189
+    notedvg 14, 24, 88, 53
+    notedvg 14, 120, 90, 209
+    notedvg 14, 48, 65, 149
+    notedvg 14, 24, 76, 74
+    notedvg 14, 72, 88, 195
+    loopend
+    end
+; Section total ticks: 4992
+
+tsec1_chn3_ly0:
+    ltp 0
+    notedvg 42, 120, 97, 200
+    notedvg 39, 72, 104, 231
+    notedv 42, 24, 95
+    notedvg 39, 48, 82, 234
+    notevg 39, 92, 202
+    notedvg 39, 60, 107, 230
+    notedvg 38, 12, 85, 170
+    notedvg 39, 24, 100, 160
+    call _chn3_ly0_call9
+    notedvg 34, 24, 56, 160
+    notedvg 37, 132, 97, 201
+    notedvg 34, 36, 74, 234
+    notedvg 34, 24, 90, 160
+    notedvg 37, 120, 91, 196
+    call _chn3_ly0_call9
+    notedvg 34, 24, 94, 160
+    notedvg 37, 132, 89, 199
+    notedvg 34, 36, 74, 234
+    notedvg 34, 24, 92, 149
+    notedvg 37, 96, 95, 184
+    notedvg 42, 120, 83, 204
+    notedvg 39, 72, 92, 224
+    notedvg 42, 24, 93, 10
+    notevg 39, 92, 160
+    notedvg 39, 72, 45, 248
+    notevg 39, 86, 234
+    notedvg 42, 120, 99, 202
+    notedvg 39, 72, 76, 224
+    notedvg 42, 96, 95, 186
+    notevg 39, 97, 184
+    notedvg 42, 120, 95, 200
+    notedvg 39, 72, 84, 220
+    notedvg 42, 96, 95, 186
+    notevg 39, 97, 184
+    call _chn3_ly0_call35
+    notedvg 44, 24, 88, 192
+    call _chn3_ly0_call37
+    notedvg 44, 56, 78, 228
+    call _chn3_ly0_call39
+    notedvg 45, 48, 84, 202
+    call _chn3_ly0_call37
+    notedv 44, 6, 78
+    ldelay 218
+    notedvg 42, 72, 95, 170
+    notedvg 39, 48, 96, 224
+    notedvg 39, 72, 84, 238
+    notedvg 42, 96, 93, 189
+    notevg 39, 80, 184
+    notevg 42, 89, 197
+    notedvg 39, 72, 88, 181
+    notedvg 39, 24, 70, 224
+    call _chn3_ly0_call35
+    notedvg 44, 24, 88, 192
+    call _chn3_ly0_call37
+    notedvg 44, 56, 78, 228
+    call _chn3_ly0_call39
+    notedvg 45, 48, 84, 202
+    call _chn3_ly0_call37
+    notedvg 44, 32, 78, 208
+    end
+; Section total ticks: 6144
+
+tsec1_chn3_ly1:
+    ltp 0
+    ldelay 24
+    call _chn3_ly0_call9
+    notedvg 34, 24, 78, 160
+    notedvg 37, 132, 85, 199
+    notedvg 34, 60, 80, 234
+    notedvg 37, 96, 95, 184
+    notedvg 42, 120, 83, 204
+    notedvg 39, 72, 109, 224
+    notedvg 42, 24, 93, 10
+    notevg 39, 92, 160
+    notedvg 39, 72, 45, 248
+    notevg 39, 86, 234
+    notedvg 42, 120, 97, 200
+    notedvg 39, 72, 92, 231
+    notedv 42, 24, 95
+    notevg 39, 92, 160
+    notedvg 39, 72, 80, 238
+    notedvg 39, 60, 94, 230
+    notedvg 38, 12, 85, 170
+    notedvg 39, 24, 100, 160
+    call _chn3_ly0_call9
+    notedvg 34, 24, 56, 160
+    notedvg 37, 132, 97, 201
+    notedvg 34, 36, 74, 234
+    notedvg 34, 24, 90, 160
+    notedvg 37, 120, 91, 196
+    call _chn3_ly0_call9
+    notedvg 34, 24, 84, 202
+    notedvg 37, 120, 97, 198
+    notedvg 39, 12, 86, 170
+    notedvg 34, 36, 88, 227
+    notedvg 34, 48, 80, 213
+    notedvg 37, 96, 94, 229
+    notedvg 39, 12, 94, 85
+    notedvg 34, 36, 88, 227
+    notedvg 34, 24, 76, 202
+    notedvg 37, 120, 93, 200
+    notedvg 39, 12, 86, 170
+    notedvg 34, 36, 88, 227
+    notedvg 34, 48, 80, 213
+    notedvg 37, 96, 94, 229
+    call _chn3_ly0_call39
+    notedvg 45, 156, 84, 239
+    call _chn3_ly1_call44
+    call _chn3_ly0_call35
+    call _chn3_ly1_call46
+    call _chn3_ly0_call35
+    notedvg 44, 132, 88, 244
+    call _chn3_ly1_call44
+    call _chn3_ly0_call35
+    call _chn3_ly1_call46
+    notedv 42, 24, 97
+    notedvg 34, 48, 65, 229
+    notedvg 34, 24, 78, 202
+    notevg 39, 88, 32
+    notedvg 34, 48, 59, 234
+    notevg 37, 87, 240
+    notedvg 34, 24, 57, 202
+    notedvg 34, 48, 84, 224
+    notedvg 37, 120, 95, 198
+    notedvg 34, 48, 71, 218
+    loop 2
+    notedvg 34, 48, 80, 234
+    loopend
+    notevg 34, 60, 229
+    notevg 34, 41, 234
+    notedvg 34, 72, 86, 227
+    notevg 37, 83, 177
+    call _chn3_ly0_call39
+    notedvg 45, 156, 84, 239
+    call _chn3_ly1_call44
+    call _chn3_ly0_call35
+    call _chn3_ly1_call46
+    call _chn3_ly0_call35
+    notedvg 44, 132, 88, 244
+    call _chn3_ly1_call44
+    call _chn3_ly0_call35
+    call _chn3_ly1_call46
+    end
+; Section total ticks: 6096
+
+tsec1_chn4_ly0:
+    ltp 0
+    ldelay 816
+    call _chn4_ly0_call2
+    call _chn4_ly0_call3
+    notedvg 51, 72, 85, 213
+    notedvg 49, 12, 99, 85
+    notevg 53, 93, 128
+    notedvg 53, 24, 83, 64
+    notedvg 51, 120, 65, 236
+    call _chn4_ly0_call9
+    call _chn4_ly0_call3
+    call _chn4_ly0_call11
+    notedvg 54, 64, 84, 216
+    call _chn4_ly0_call9
+    call _chn4_ly0_call14
+    call _chn4_ly0_call15
+    call _chn4_ly0_call2
+    call _chn4_ly0_call14
+    call _chn4_ly0_call18
+    notedvg 49, 16, 86, 112
+    notevg 46, 83, 144
+    notevg 51, 91, 160
+    notevg 49, 86, 112
+    notedv 46, 7, 83
+    ldelay 225
+    notedvg 46, 72, 87, 227
+    notedvg 44, 24, 84, 117
+    notedvg 42, 288, 81, 248
+    notedvg 46, 12, 67, 149
+    notevg 46, 85, 149
+    notedvg 46, 24, 113, 181
+    notevg 46, 101, 192
+    notevg 45, 89, 53
+    notedv 46, 8, 85
+    ldelay 280
+    notedvg 46, 72, 99, 234
+    notedvg 44, 24, 79, 74
+    notedvg 51, 288, 93, 246
+    notedvg 46, 12, 72, 149
+    notevg 46, 80, 149
+    notedvg 46, 24, 110, 181
+    notevg 46, 104, 192
+    notevg 45, 90, 53
+    notedvg 46, 144, 86, 241
+    notedvg 46, 24, 99, 213
+    call _chn4_ly0_call14
+    notedvg 51, 72, 85, 213
+    notedvg 49, 48, 99, 213
+    notedvg 51, 120, 65, 236
+    notedvg 51, 48, 91, 224
+    notedvg 49, 24, 85, 85
+    notevg 51, 87, 149
+    notedvg 49, 48, 99, 234
+    call _chn4_ly0_call18
+    notedvg 49, 32, 86, 184
+    notedvg 51, 16, 91, 160
+    notedv 49, 9, 86
+    ldelay 1559
+    end
+; Section total ticks: 6144
+
+tsec1_chn4_ly1:
+    ltp 0
+    ldelay 816
+    call _chn4_ly0_call9
+    call _chn4_ly0_call14
+    call _chn4_ly0_call15
+    call _chn4_ly0_call2
+    call _chn4_ly0_call14
+    call _chn4_ly0_call18
+    notedvg 49, 16, 86, 112
+    notevg 46, 83, 144
+    notevg 51, 91, 160
+    notevg 49, 86, 112
+    notedvg 46, 64, 83, 228
+    call _chn4_ly0_call2
+    call _chn4_ly0_call3
+    notedvg 51, 72, 85, 213
+    notedvg 49, 12, 99, 85
+    notevg 53, 93, 128
+    notedvg 53, 24, 83, 64
+    notedvg 51, 120, 65, 236
+    call _chn4_ly0_call9
+    call _chn4_ly0_call3
+    call _chn4_ly0_call11
+    notedvg 54, 232, 84, 244
+    notedvg 54, 72, 79, 220
+    notedv 53, 24, 81
+    notedvg 51, 288, 87, 246
+    notedvg 54, 12, 61, 128
+    notevg 54, 89, 128
+    notedvg 54, 24, 97, 149
+    notevg 54, 109, 160
+    notevg 53, 89, 21
+    notedvg 51, 288, 81, 246
+    notedvg 54, 72, 81, 216
+    notedvg 53, 312, 91, 235
+    notedvg 54, 12, 66, 128
+    notevg 54, 84, 128
+    notedvg 54, 24, 94, 149
+    notevg 54, 112, 160
+    notevg 53, 90, 21
+    notedvg 51, 120, 82, 232
+    call _chn4_ly0_call9
+    notedvg 56, 24, 89, 21
+    notevg 57, 85, 128
+    notevg 56, 91, 192
+    notedvg 54, 108, 91, 241
+    notedvg 53, 12, 93, 128
+    notedvg 53, 168, 83, 228
+    notedvg 54, 24, 91, 192
+    call _chn4_ly0_call3
+    call _chn4_ly0_call11
+    notedv 54, 10, 84
+    ldelay 1542
+    end
+; Section total ticks: 6144
+
+tsec1_chn4_ly2:
+    ltp 0
+    ldelay 3384
+    notedv 42, 12, 96
+    ldelay 492
+    notedv 42, 4, 99
+    ldelay 140
+    call _chn4_ly0_call15
+    notedvg 42, 24, 99, 213
+    notedvg 46, 96, 99, 245
+    notedv 46, 4, 99
+    ldelay 148
+    notedvg 46, 48, 83, 218
+    notedv 46, 7, 83
+    ldelay 1545
+    end
+; Section total ticks: 6144
+
+; Calls
+
+_chn0_ly0_call2:
+    notedv 39, 72, 117
+    notedvg 38, 120, 86, 51
+    end
+; Section total ticks: 192
+
+; Note Layers
+
+_chn0_ly0_call7:
+    notedv 39, 72, 101
+    notedvg 38, 120, 93, 51
+    notedv 39, 72, 100
+    end
+; Section total ticks: 264
+
+; Calls
+
+_chn0_ly0_call10:
+    notedvg 38, 120, 73, 51
+    notedv 39, 72, 104
+    end
+; Section total ticks: 192
+
+; Note Layers
+
+_chn1_ly0_call5:
+    notedvg 27, 72, 64, 181
+    notevg 28, 66, 3
+    end
+; Section total ticks: 144
+
+; Calls
+
+_chn1_ly0_call12:
+    notedvg 27, 72, 97, 177
+    notevg 28, 70, 3
+    end
+; Section total ticks: 144
+
+; Note Layers
+
+_chn1_ly0_call18:
+    notedvg 27, 24, 110, 74
+    notedvg 27, 72, 76, 181
+    end
+; Section total ticks: 96
+
+; Calls
+
+_chn2_ly1_call2:
+    notedvg 16, 48, 89, 181
+    notedvg 16, 144, 89, 222
+    notedvg 16, 48, 89, 144
+    end
+; Section total ticks: 240
+
+; Note Layers
+
+_chn1_ly0_call24:
+    notedvg 28, 72, 118, 28
+    notedvg 28, 24, 108, 53
+    end
+; Section total ticks: 96
+
+; Calls
+
+_chn1_ly0_call31:
+    notedvg 28, 72, 68, 39
+    notedvg 28, 24, 67, 64
+    end
+; Section total ticks: 96
+
+; Note Layers
+
+_chn1_ly0_call33:
+    notedvg 28, 72, 102, 3
+    notedvg 28, 24, 87, 21
+    notevg 27, 82, 96
+    notedvg 27, 72, 127, 184
+    end
+; Section total ticks: 192
+
+; Calls
+
+_chn1_ly0_call35:
+    notedvg 27, 24, 125, 74
+    notedvg 27, 72, 118, 177
+    notevg 28, 120, 3
+    notedvg 28, 24, 115, 32
+    notevg 27, 116, 64
+    end
+; Section total ticks: 216
+
+; Note Layers
+
+_chn3_ly0_call9:
+    notedvg 39, 12, 92, 64
+    notedvg 34, 36, 74, 234
+    end
+; Section total ticks: 48
+
+; Calls
+
+_chn3_ly0_call35:
+    notedvg 42, 48, 91, 106
+    notevg 39, 91, 106
+    notevg 44, 93, 117
+    end
+; Section total ticks: 144
+
+; Note Layers
+
+_chn3_ly0_call37:
+    notedvg 42, 24, 88, 192
+    notevg 39, 99, 21
+    notedvg 34, 48, 86, 224
+    notevg 37, 74, 218
+    notevg 39, 80, 208
+    notevg 34, 76, 229
+    call _chn3_ly0_call39
+    notedvg 45, 48, 84, 202
+    notedvg 42, 24, 88, 192
+    notedvg 45, 96, 99, 197
+    notedvg 45, 48, 78, 181
+    notedvg 45, 16, 78, 32
+    end
+; Section total ticks: 568
+
+; Calls
+
+_chn3_ly0_call39:
+    notedvg 34, 48, 65, 234
+    notevg 42, 90, 229
+    end
+; Section total ticks: 96
+
+; Note Layers
+
+_chn3_ly1_call44:
+    notedvg 41, 12, 74, 106
+    notedvg 41, 96, 84, 189
+    end
+; Section total ticks: 108
+
+; Calls
+
+_chn3_ly1_call46:
+    notedvg 44, 160, 88, 246
+    notedvg 44, 16, 78, 160
+    notedvg 42, 48, 80, 218
+    notedvg 42, 16, 80, 144
+    end
+; Section total ticks: 240
+
+; Note Layers
+
+_chn4_ly0_call2:
+    notedvg 42, 24, 99, 213
+    notevg 46, 99, 213
+    end
+; Section total ticks: 48
+
+; Calls
+
+_chn4_ly0_call3:
+    notedvg 56, 24, 89, 21
+    notevg 57, 85, 128
+    notevg 56, 91, 192
+    notevg 54, 91, 192
+    end
+; Section total ticks: 96
+
+; Note Layers
+
+_chn4_ly0_call9:
+    notedvg 51, 24, 91, 192
+    notevg 54, 91, 192
+    end
+; Section total ticks: 48
+
+; Calls
+
+_chn4_ly0_call11:
+    notedvg 57, 96, 85, 224
+    notedvg 57, 16, 99, 112
+    notevg 56, 91, 96
+    notevg 54, 84, 96
+    notevg 57, 99, 112
+    notevg 56, 91, 96
+    end
+; Section total ticks: 176
+
+; Note Layers
+
+_chn4_ly0_call14:
+    notedvg 49, 24, 85, 85
+    notevg 51, 87, 149
+    notevg 49, 99, 213
+    notevg 46, 99, 213
+    end
+; Section total ticks: 96
+
+; Calls
+
+_chn4_ly0_call15:
+    notedvg 42, 72, 87, 220
+    notedvg 41, 12, 99, 106
+    notevg 44, 101, 170
+    notedvg 44, 24, 73, 117
+    notedvg 42, 120, 69, 234
+    end
+; Section total ticks: 240
+
+; Note Layers
+
+_chn4_ly0_call18:
+    notedvg 51, 96, 87, 229
+    notedvg 51, 16, 91, 160
+    end
+; Section total ticks: 112
+

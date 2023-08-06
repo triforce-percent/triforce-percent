@@ -21,7 +21,10 @@ define procaudio
 	echo "dtype $(2)\ndata1 0x$(3)020201\ndata2 0x$(4)0000" > $(STATICDATADIR)/$(1)/conf.txt
 endef
 
-	
+ifneq ("$(MEMES)","")
+default: ocamungus.aseq
+	$(call procaudio,6,1,71,0E00,ocamungus.aseq)
+else
 default: $(TARGETS)
 	$(call procaudio,6,1,6E,0900,OvertureOfSages.aseq)
 	$(call procaudio,7,1,33,0900,OvertureOfSagesWarp.aseq)
@@ -35,6 +38,7 @@ default: $(TARGETS)
 	$(call procaudio,15,2,27,1040,HereTogetherBank.abnk)
 	$(call procaudio,16,1,76,0300,StaffRoll.aseq)
 	$(call procaudio,17,1,77,0300,Trailer.aseq)
+endif
 
 # %.pat: %.aseq
 # 	$(CREATE_PATCH) --full $< $@
