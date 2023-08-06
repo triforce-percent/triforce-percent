@@ -1,6 +1,14 @@
+ifneq ("$(MEMES)","")
+#BETAKOKIRIREPLACEMENT = PatrickStar/
+#BETAKOKIRIREPLACEMENT = MimicChest/
+BETAKOKIRIREPLACEMENT = Amogus/
+else
+BETAKOKIRIREPLACEMENT = BetaKokiri/
+endif
+
 SUBDIRS = \
+$(BETAKOKIRIREPLACEMENT) \
 BetaGreatFairy/ \
-BetaKokiri/ \
 BossRunningMan/ \
 BotWLink/ \
 BotWZelda/ \

@@ -1,0 +1,22 @@
+//Patched actors
+PATCH 0xBCDB70 ../actor/z_player/ovl_player_actor.pat
+PATCH 0xBB11E0 ../actor/z_kaleido_scope/ovl_kaleido_scope.pat
+PATCH 0xEA7360 ../actor/z_oceff_wipe/actor.pat
+ACTOR 333 ../actor/z_en_owl/z_en_owl.zovl
+
+//Misc scene patches
+PATCH 0x217C000 ../scene/spot10/room_7.pat
+
+//Custom text
+STATICDATA ../text/messages.bin 6 0 0
+
+//ACTOR 123 ../actor/PatrickStar/PatrickStar.zovl
+//OBJECT 127 ../actor/PatrickStar/zobj.zobj
+
+//ACTOR 126 ../actor/MimicChest/MimicChest.zovl
+//OBJECT 131 ../actor/MimicChest/zobj.zobj
+
+ACTOR 127 ../actor/Amogus/Amogus.zovl
+OBJECT 132 ../actor/Amogus/zobj.zobj
+
+STATICDATA ../music/ocarina_meme.aseq 1 0x71020201 0x0E000000

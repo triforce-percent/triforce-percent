@@ -1,0 +1,16 @@
+extern u64 AmogusObj_blue_ci8[];
+extern u64 AmogusObj_blue_ci8_pal_rgba16[];
+extern Vtx AmogusObj_Root_mesh_layer_Opaque_vtx_0[169];
+extern Gfx AmogusObj_Root_mesh_layer_Opaque_tri_0[];
+extern Vtx AmogusObj_Root_mesh_layer_Opaque_vtx_1[24];
+extern Gfx AmogusObj_Root_mesh_layer_Opaque_tri_1[];
+extern Vtx AmogusObj_Root_mesh_layer_Opaque_vtx_2[8];
+extern Gfx AmogusObj_Root_mesh_layer_Opaque_tri_2[];
+extern Gfx mat_AmogusObj_RedSus_layerOpaque[];
+extern Gfx mat_AmogusObj_WindowBorder_layerOpaque[];
+extern Gfx mat_AmogusObj_Window_layerOpaque[];
+extern Gfx AmogusObj_Root_mesh_layer_Opaque[];
+extern SkeletonHeader AmogusObj;
+#define AMOGUSOBJ_ROOT_POS_LIMB 0
+#define AMOGUSOBJ_ROOT_ROT_LIMB 1
+#define AMOGUSOBJ_NUM_LIMBS 2
